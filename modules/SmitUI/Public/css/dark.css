@@ -1,0 +1,1859 @@
+/* ============================================================
+   dark.css — billing-exact dark theme for FreeScout
+   Активируется через html[data-theme="dark"] + body.dark-theme
+   Все правила !important чтобы переписать inline-стили SmitUIServiceProvider
+============================================================ */
+
+/* ============ 1. БАЗА: body + wrapper ============ */
+/* Максимально специфичные правила — побеждают inline-стили SmitUIServiceProvider */
+html[data-theme="dark"] body {
+    background-color: #1a1d23 !important;
+    background-image: none !important;
+    color: #e4e6ea !important;
+}
+body.dark-theme {
+    background-color: #1a1d23 !important;
+    background-image: none !important;
+    color: #e4e6ea !important;
+}
+html[data-theme="dark"] {
+    background-color: #1a1d23 !important;
+    color: #e4e6ea !important;
+}
+/* body.smit-* классы добавляют свой background через inline-style — нейтрализуем */
+html[data-theme="dark"] body.smit-dashboard,
+html[data-theme="dark"] body.smit-kanban,
+html[data-theme="dark"] body.smit-ai-sessions,
+html[data-theme="dark"] body.smit-kb,
+body.dark-theme.smit-dashboard,
+body.dark-theme.smit-kanban,
+body.dark-theme.smit-ai-sessions,
+body.dark-theme.smit-kb {
+    background: #1a1d23 !important;
+    background-image: none !important;
+}
+
+html[data-theme="dark"] .wrapper,
+html[data-theme="dark"] .content,
+html[data-theme="dark"] .content-2col,
+html[data-theme="dark"] .container,
+html[data-theme="dark"] .container-fluid,
+body.dark-theme .wrapper,
+body.dark-theme .content,
+body.dark-theme .container,
+body.dark-theme .container-fluid {
+    background-color: var(--surface-page) !important;
+    color: var(--text-primary) !important;
+}
+
+html[data-theme="dark"] .well,
+body.dark-theme .well {
+    background-color: var(--surface-muted) !important;
+    border-color: var(--border-default) !important;
+}
+
+html[data-theme="dark"] hr,
+body.dark-theme hr {
+    border-top-color: var(--border-default) !important;
+}
+
+html[data-theme="dark"] .text-muted,
+body.dark-theme .text-muted { color: var(--text-muted) !important; }
+
+html[data-theme="dark"] h1,
+html[data-theme="dark"] h2,
+html[data-theme="dark"] h3,
+html[data-theme="dark"] h4,
+html[data-theme="dark"] h5,
+html[data-theme="dark"] h6,
+body.dark-theme h1,
+body.dark-theme h2,
+body.dark-theme h3,
+body.dark-theme h4,
+body.dark-theme h5,
+body.dark-theme h6 {
+    color: var(--text-primary) !important;
+}
+
+html[data-theme="dark"] .section-heading,
+body.dark-theme .section-heading {
+    background-color: var(--surface-card) !important;
+    border-color: var(--border-default) !important;
+}
+
+/* ============ 2. NAVBAR DARK (40px compact, billing-style) ============ */
+html[data-theme="dark"] .navbar-default,
+html[data-theme="dark"] .navbar,
+body.dark-theme .navbar-default,
+body.dark-theme .navbar {
+    background-color: #1f2229 !important;
+    background-image: none !important;
+    border-color: #2f333b !important;
+    border-bottom: 1px solid #2f333b !important;
+    box-shadow: 0 1px 0 rgba(0,0,0,.30) !important;
+}
+
+/* Menu items dark */
+html[data-theme="dark"] .navbar-default .navbar-nav > li > a,
+html[data-theme="dark"] .navbar .navbar-nav > li > a,
+body.dark-theme .navbar-default .navbar-nav > li > a {
+    color: #c0c4cc !important;
+    border-bottom-color: transparent !important;
+}
+html[data-theme="dark"] .navbar-default .navbar-nav > li > a > .glyphicon,
+html[data-theme="dark"] .navbar-default .navbar-nav > li > a > .fa,
+html[data-theme="dark"] .navbar-default .navbar-nav > li > a > i,
+body.dark-theme .navbar-default .navbar-nav > li > a > .glyphicon {
+    color: #5BA89D !important;
+}
+html[data-theme="dark"] .navbar-default .navbar-nav > li > a:hover,
+html[data-theme="dark"] .navbar-default .navbar-nav > li > a:focus,
+body.dark-theme .navbar-default .navbar-nav > li > a:hover {
+    color: #82cec3 !important;
+    background-color: rgba(91,168,157,.12) !important;
+}
+html[data-theme="dark"] .navbar-default .navbar-nav > .active > a,
+html[data-theme="dark"] .navbar-default .navbar-nav > .active > a:hover,
+html[data-theme="dark"] .navbar-default .navbar-nav > .active > a:focus,
+body.dark-theme .navbar-default .navbar-nav > .active > a {
+    color: #82cec3 !important;
+    background-color: rgba(91,168,157,.15) !important;
+    border-bottom: 2px solid #43b77a !important;
+}
+html[data-theme="dark"] .navbar-default .navbar-nav > .open > a,
+html[data-theme="dark"] .navbar-default .navbar-nav > .open > a:hover,
+body.dark-theme .navbar-default .navbar-nav > .open > a {
+    color: #82cec3 !important;
+    background-color: rgba(91,168,157,.15) !important;
+}
+
+/* Navbar search input dark */
+html[data-theme="dark"] .navbar-default .navbar-form .form-control,
+html[data-theme="dark"] .navbar .navbar-form .form-control,
+body.dark-theme .navbar-default .navbar-form .form-control {
+    background-color: rgba(255,255,255,.08) !important;
+    border-color: rgba(255,255,255,.10) !important;
+    color: #e4e6ea !important;
+}
+html[data-theme="dark"] .navbar-default .navbar-form .form-control::placeholder,
+body.dark-theme .navbar-default .navbar-form .form-control::placeholder {
+    color: #9ca3af !important;
+}
+
+/* Profile dropdown dark */
+html[data-theme="dark"] .navbar-default .navbar-right > li > a.dropdown-toggle-account,
+body.dark-theme .navbar-default .navbar-right > li > a.dropdown-toggle-account {
+    color: #c0c4cc !important;
+}
+html[data-theme="dark"] .navbar-default .navbar-right .nav-user,
+body.dark-theme .navbar-default .navbar-right .nav-user {
+    color: #c0c4cc !important;
+}
+
+/* Toggle theme button dark */
+html[data-theme="dark"] .navbar .theme-toggle-btn,
+html[data-theme="dark"] .navbar-default .theme-toggle-btn,
+body.dark-theme .navbar .theme-toggle-btn {
+    color: #c0c4cc !important;
+}
+html[data-theme="dark"] .navbar .theme-toggle-btn:hover,
+body.dark-theme .navbar .theme-toggle-btn:hover {
+    background-color: rgba(91,168,157,.15) !important;
+    color: #82cec3 !important;
+}
+
+/* Navbar divider dark */
+html[data-theme="dark"] .navbar-divider,
+body.dark-theme .navbar-divider {
+    background-color: #3a3f47 !important;
+}
+
+/* Dropdown menu из navbar dark — brand-граница сверху */
+html[data-theme="dark"] .navbar-default .navbar-nav > li > .dropdown-menu,
+html[data-theme="dark"] .navbar .navbar-nav > li > .dropdown-menu,
+body.dark-theme .navbar-default .navbar-nav > li > .dropdown-menu {
+    border-top: 2px solid #43b77a !important;
+    background-color: #2a2e37 !important;
+    box-shadow: 0 8px 24px rgba(0,0,0,.55) !important;
+}
+
+/* Caret в dropdown-toggle dark */
+html[data-theme="dark"] .navbar-default .navbar-nav > li > a .caret,
+body.dark-theme .navbar-default .navbar-nav > li > a .caret {
+    border-top-color: currentColor !important;
+}
+
+/* Web-notifications bell dark — белёсая иконка */
+html[data-theme="dark"] .navbar .web-notifications > a,
+html[data-theme="dark"] .navbar-default .web-notifications > a,
+body.dark-theme .navbar .web-notifications > a {
+    color: #c0c4cc !important;
+}
+html[data-theme="dark"] .navbar .web-notifications > a:hover,
+body.dark-theme .navbar .web-notifications > a:hover {
+    color: #82cec3 !important;
+    background-color: rgba(91,168,157,.15) !important;
+}
+
+/* ============ 3. SIDEBAR / FOLDERS / 2col ============ */
+html[data-theme="dark"] .main-sidebar,
+html[data-theme="dark"] .sidebar,
+html[data-theme="dark"] .sidebar-2col,
+html[data-theme="dark"] .sidebar-menu,
+body.dark-theme .main-sidebar,
+body.dark-theme .sidebar,
+body.dark-theme .sidebar-2col,
+body.dark-theme .sidebar-menu {
+    background-color: rgba(20, 25, 32, 0.78) !important;
+    border-color: var(--border-default) !important;
+    color: var(--text-primary) !important;
+}
+
+html[data-theme="dark"] .sidebar-title,
+html[data-theme="dark"] .sidebar-2col .sidebar-title,
+body.dark-theme .sidebar-title,
+body.dark-theme .sidebar-2col .sidebar-title {
+    color: var(--text-muted) !important;
+    border-bottom-color: var(--border-default) !important;
+}
+
+html[data-theme="dark"] .sidebar-menu > li > a,
+html[data-theme="dark"] .sidebar-2col li a,
+body.dark-theme .sidebar-menu > li > a,
+body.dark-theme .sidebar-2col li a {
+    color: var(--text-secondary) !important;
+}
+html[data-theme="dark"] .sidebar-menu > li > a:hover,
+html[data-theme="dark"] .sidebar-2col li a:hover,
+html[data-theme="dark"] .sidebar-menu > li.active > a,
+html[data-theme="dark"] .sidebar-2col li.active a,
+body.dark-theme .sidebar-menu > li > a:hover,
+body.dark-theme .sidebar-2col li a:hover,
+body.dark-theme .sidebar-menu > li.active > a,
+body.dark-theme .sidebar-2col li.active a {
+    color: var(--brand-primary-light) !important;
+    background-color: rgba(255,255,255,.05) !important;
+}
+
+html[data-theme="dark"] .folder-count,
+html[data-theme="dark"] .sidebar-menu .badge,
+body.dark-theme .folder-count,
+body.dark-theme .sidebar-menu .badge {
+    background-color: rgba(255,255,255,.10) !important;
+    color: var(--text-secondary) !important;
+}
+
+/* ============ 4. PANELS / BLOCKS ============ */
+html[data-theme="dark"] .panel,
+html[data-theme="dark"] .panel-default,
+html[data-theme="dark"] .block,
+html[data-theme="dark"] .section,
+html[data-theme="dark"] .container-main,
+body.dark-theme .panel,
+body.dark-theme .panel-default,
+body.dark-theme .block,
+body.dark-theme .section,
+body.dark-theme .container-main {
+    background-color: var(--surface-card) !important;
+    border-color: var(--border-default) !important;
+    color: var(--text-primary) !important;
+    box-shadow: var(--shadow-sm) !important;
+}
+html[data-theme="dark"] .panel-heading,
+html[data-theme="dark"] .panel-default > .panel-heading,
+body.dark-theme .panel-heading,
+body.dark-theme .panel-default > .panel-heading {
+    background-color: var(--surface-muted) !important;
+    border-bottom-color: var(--border-default) !important;
+    color: var(--text-primary) !important;
+}
+html[data-theme="dark"] .panel-footer,
+body.dark-theme .panel-footer {
+    background-color: var(--surface-muted) !important;
+    border-top-color: var(--border-default) !important;
+    color: var(--text-secondary) !important;
+}
+
+/* ============ 5. TABLES / CONVERSATIONS ============ */
+html[data-theme="dark"] .table,
+html[data-theme="dark"] .table-conversations,
+body.dark-theme .table,
+body.dark-theme .table-conversations {
+    background-color: transparent !important;
+    color: var(--text-primary) !important;
+}
+html[data-theme="dark"] .table > thead > tr > th,
+html[data-theme="dark"] .table-conversations > thead > tr > th,
+body.dark-theme .table > thead > tr > th,
+body.dark-theme .table-conversations > thead > tr > th {
+    background-color: var(--surface-muted) !important;
+    color: var(--text-secondary) !important;
+    border-bottom-color: var(--border-default) !important;
+    border-top-color: var(--border-default) !important;
+}
+html[data-theme="dark"] .table > tbody > tr,
+html[data-theme="dark"] .table > tbody > tr > td,
+html[data-theme="dark"] .table-conversations > tbody > tr,
+html[data-theme="dark"] .table-conversations > tbody > tr > td,
+body.dark-theme .table > tbody > tr,
+body.dark-theme .table > tbody > tr > td,
+body.dark-theme .table-conversations > tbody > tr,
+body.dark-theme .table-conversations > tbody > tr > td {
+    border-color: var(--border-subtle) !important;
+    color: var(--text-primary) !important;
+    background-color: transparent !important;
+}
+html[data-theme="dark"] .table-hover > tbody > tr:hover,
+html[data-theme="dark"] .table-conversations > tbody > tr:hover,
+body.dark-theme .table-hover > tbody > tr:hover,
+body.dark-theme .table-conversations > tbody > tr:hover {
+    background-color: rgba(255,255,255,.04) !important;
+}
+html[data-theme="dark"] .table-striped > tbody > tr:nth-of-type(odd),
+body.dark-theme .table-striped > tbody > tr:nth-of-type(odd) {
+    background-color: rgba(255,255,255,.02) !important;
+}
+
+/* Unread row */
+html[data-theme="dark"] .conv-row.unread,
+body.dark-theme .conv-row.unread {
+    background-color: rgba(91,168,157,.07) !important;
+}
+html[data-theme="dark"] .conv-row.unread:hover,
+body.dark-theme .conv-row.unread:hover {
+    background-color: rgba(91,168,157,.12) !important;
+}
+
+html[data-theme="dark"] .conv-customer,
+html[data-theme="dark"] .conv-subject,
+body.dark-theme .conv-customer,
+body.dark-theme .conv-subject {
+    color: var(--text-primary) !important;
+}
+html[data-theme="dark"] .conv-preview,
+html[data-theme="dark"] .conv-attr,
+body.dark-theme .conv-preview,
+body.dark-theme .conv-attr {
+    color: var(--text-muted) !important;
+}
+
+/* lc-* classes from SmitUI */
+html[data-theme="dark"] .conv-last-comment-td a,
+body.dark-theme .conv-last-comment-td a { color: var(--text-muted) !important; }
+html[data-theme="dark"] .conv-last-comment-td.lc-orange a,
+body.dark-theme .conv-last-comment-td.lc-orange a { color: #f0ad4e !important; }
+html[data-theme="dark"] .conv-last-comment-td.lc-red a,
+body.dark-theme .conv-last-comment-td.lc-red a { color: #e57373 !important; }
+
+/* ============ 6. FORMS / INPUTS ============ */
+html[data-theme="dark"] .form-control,
+html[data-theme="dark"] input[type="text"],
+html[data-theme="dark"] input[type="email"],
+html[data-theme="dark"] input[type="password"],
+html[data-theme="dark"] input[type="number"],
+html[data-theme="dark"] input[type="search"],
+html[data-theme="dark"] textarea,
+html[data-theme="dark"] select,
+body.dark-theme .form-control,
+body.dark-theme input[type="text"],
+body.dark-theme input[type="email"],
+body.dark-theme input[type="password"],
+body.dark-theme input[type="number"],
+body.dark-theme input[type="search"],
+body.dark-theme textarea,
+body.dark-theme select {
+    background-color: var(--surface-card) !important;
+    border-color: var(--border-default) !important;
+    color: var(--text-primary) !important;
+}
+html[data-theme="dark"] .form-control:focus,
+body.dark-theme .form-control:focus {
+    border-color: var(--brand-primary) !important;
+    box-shadow: 0 0 0 2px var(--brand-primary-25) !important;
+}
+html[data-theme="dark"] .form-control::placeholder,
+html[data-theme="dark"] textarea::placeholder,
+body.dark-theme .form-control::placeholder,
+body.dark-theme textarea::placeholder {
+    color: var(--text-muted) !important;
+    opacity: 1;
+}
+html[data-theme="dark"] .form-control[disabled],
+html[data-theme="dark"] .form-control[readonly],
+body.dark-theme .form-control[disabled],
+body.dark-theme .form-control[readonly] {
+    background-color: var(--surface-page) !important;
+    opacity: 0.7;
+}
+
+html[data-theme="dark"] label,
+html[data-theme="dark"] .control-label,
+body.dark-theme label,
+body.dark-theme .control-label {
+    color: var(--text-primary) !important;
+}
+html[data-theme="dark"] .help-block,
+body.dark-theme .help-block { color: var(--text-muted) !important; }
+
+html[data-theme="dark"] .input-group-addon,
+body.dark-theme .input-group-addon {
+    background-color: var(--surface-muted) !important;
+    border-color: var(--border-default) !important;
+    color: var(--text-secondary) !important;
+}
+
+/* ============ UNIFIED BUTTONS DARK (billing-style) ============ */
+/* Outline default (Настройки/Сохранить/CSV) — прозрачный с тёмным border */
+html[data-theme="dark"] .btn-default,
+html[data-theme="dark"] .btn-default:focus,
+html[data-theme="dark"] .btn-bordered,
+html[data-theme="dark"] .btn-bordered:focus,
+body.dark-theme .btn-default,
+body.dark-theme .btn-bordered {
+    background-color: transparent !important;
+    border-color: #454950 !important;
+    color: #e4e6ea !important;
+}
+html[data-theme="dark"] .btn-default .glyphicon,
+html[data-theme="dark"] .btn-default .fa,
+html[data-theme="dark"] .btn-default > i,
+html[data-theme="dark"] .btn-bordered .glyphicon,
+html[data-theme="dark"] .btn-bordered > i,
+body.dark-theme .btn-default .glyphicon,
+body.dark-theme .btn-bordered .glyphicon {
+    color: #82cec3 !important;
+}
+html[data-theme="dark"] .btn-default:hover,
+html[data-theme="dark"] .btn-default:active,
+html[data-theme="dark"] .btn-bordered:hover,
+body.dark-theme .btn-default:hover,
+body.dark-theme .btn-bordered:hover {
+    background-color: rgba(91,168,157,.12) !important;
+    border-color: #5BA89D !important;
+    color: #82cec3 !important;
+}
+
+/* Outline danger (Удалить) dark */
+html[data-theme="dark"] .btn-danger,
+html[data-theme="dark"] .btn-danger:focus,
+html[data-theme="dark"] .btn-outline-danger,
+body.dark-theme .btn-danger {
+    background-color: transparent !important;
+    border-color: #5a3030 !important;
+    color: #ff8a8a !important;
+}
+html[data-theme="dark"] .btn-danger .glyphicon,
+html[data-theme="dark"] .btn-danger > i,
+body.dark-theme .btn-danger .glyphicon {
+    color: #ff8a8a !important;
+}
+html[data-theme="dark"] .btn-danger:hover,
+html[data-theme="dark"] .btn-danger:active,
+body.dark-theme .btn-danger:hover {
+    background-color: rgba(224,85,85,.15) !important;
+    border-color: #e05555 !important;
+    color: #ff8a8a !important;
+}
+
+/* Outline warning dark */
+html[data-theme="dark"] .btn-warning,
+body.dark-theme .btn-warning {
+    background-color: transparent !important;
+    border-color: #5a4520 !important;
+    color: #f0ad4e !important;
+}
+html[data-theme="dark"] .btn-warning > i,
+html[data-theme="dark"] .btn-warning .glyphicon,
+body.dark-theme .btn-warning .glyphicon {
+    color: #f0ad4e !important;
+}
+html[data-theme="dark"] .btn-warning:hover,
+body.dark-theme .btn-warning:hover {
+    background-color: rgba(240,173,78,.15) !important;
+    border-color: #f0ad4e !important;
+}
+
+/* Outline info dark */
+html[data-theme="dark"] .btn-info,
+body.dark-theme .btn-info {
+    background-color: transparent !important;
+    border-color: #2a4a55 !important;
+    color: #5bc0de !important;
+}
+html[data-theme="dark"] .btn-info > i,
+body.dark-theme .btn-info .glyphicon {
+    color: #5bc0de !important;
+}
+html[data-theme="dark"] .btn-info:hover,
+body.dark-theme .btn-info:hover {
+    background-color: rgba(91,192,222,.15) !important;
+    border-color: #5bc0de !important;
+}
+
+/* Filled primary/success остаются brand-зелёными — переопределение не нужно */
+
+/* Chip toggles dark (неактивные) */
+html[data-theme="dark"] .btn-group > .btn:not(.active):not(.btn-primary):not(.btn-success):not(.btn-danger),
+body.dark-theme .btn-group > .btn:not(.active):not(.btn-primary):not(.btn-success):not(.btn-danger) {
+    background-color: transparent !important;
+    border-color: #454950 !important;
+    color: #c0c4cc !important;
+}
+html[data-theme="dark"] .btn-group > .btn:not(.active):hover,
+body.dark-theme .btn-group > .btn:not(.active):hover {
+    background-color: rgba(91,168,157,.12) !important;
+    border-color: #5BA89D !important;
+    color: #82cec3 !important;
+}
+
+/* Link button dark */
+html[data-theme="dark"] .btn-link,
+body.dark-theme .btn-link {
+    color: #82cec3 !important;
+}
+html[data-theme="dark"] .btn-link:hover,
+body.dark-theme .btn-link:hover {
+    color: #a8ddd4 !important;
+    background-color: rgba(91,168,157,.10) !important;
+}
+
+/* Form controls dark — единый стиль (32px height, 6px radius) */
+html[data-theme="dark"] .form-control,
+body.dark-theme .form-control {
+    background-color: #2a2e37 !important;
+    border-color: #454950 !important;
+    color: #e4e6ea !important;
+    border-radius: 6px !important;
+}
+html[data-theme="dark"] .form-control:focus,
+body.dark-theme .form-control:focus {
+    background-color: #2a2e37 !important;
+    border-color: #5BA89D !important;
+    box-shadow: 0 0 0 3px rgba(91,168,157,.25) !important;
+}
+
+/* Select2 dark — единый стиль с form-control */
+html[data-theme="dark"] .select2-container--default .select2-selection--single,
+body.dark-theme .select2-container--default .select2-selection--single {
+    background-color: #2a2e37 !important;
+    border: 1px solid #454950 !important;
+    border-radius: 6px !important;
+    height: 32px !important;
+}
+html[data-theme="dark"] .select2-container--default .select2-selection--single .select2-selection__rendered,
+body.dark-theme .select2-container--default .select2-selection--single .select2-selection__rendered {
+    color: #e4e6ea !important;
+    line-height: 30px !important;
+}
+
+/* Badges/labels — единый pill в dark */
+html[data-theme="dark"] .badge,
+html[data-theme="dark"] .label,
+body.dark-theme .badge,
+body.dark-theme .label {
+    background-color: #2a2e37 !important;
+    color: #c0c4cc !important;
+    border: 1px solid #454950 !important;
+}
+
+/* ============ TAGS DARK (semantic pills) ============ */
+html[data-theme="dark"] .tag,
+html[data-theme="dark"] .smit-tag,
+html[data-theme="dark"] .amount-tag,
+body.dark-theme .tag,
+body.dark-theme .smit-tag,
+body.dark-theme .amount-tag {
+    background-color: #2a2e37 !important;
+    color: #c0c4cc !important;
+    border-color: #3a3f47 !important;
+}
+
+/* success / income / positive */
+html[data-theme="dark"] .tag-success,
+html[data-theme="dark"] .tag.success,
+html[data-theme="dark"] .smit-tag-success,
+html[data-theme="dark"] .amount-tag-positive,
+html[data-theme="dark"] .amount-tag.positive,
+html[data-theme="dark"] .label-success,
+body.dark-theme .tag-success,
+body.dark-theme .smit-tag-success,
+body.dark-theme .amount-tag-positive,
+body.dark-theme .label-success {
+    background-color: rgba(67,183,122,.15) !important;
+    color: #6fcd99 !important;
+    border-color: rgba(67,183,122,.40) !important;
+}
+html[data-theme="dark"] .tag-success > i,
+html[data-theme="dark"] .smit-tag-success > i,
+html[data-theme="dark"] .amount-tag-positive > i,
+html[data-theme="dark"] .label-success > i,
+body.dark-theme .tag-success > i,
+body.dark-theme .label-success > i {
+    color: #6fcd99 !important;
+}
+
+/* danger / expense / negative */
+html[data-theme="dark"] .tag-danger,
+html[data-theme="dark"] .smit-tag-danger,
+html[data-theme="dark"] .amount-tag-negative,
+html[data-theme="dark"] .amount-tag.negative,
+html[data-theme="dark"] .label-danger,
+body.dark-theme .tag-danger,
+body.dark-theme .smit-tag-danger,
+body.dark-theme .amount-tag-negative,
+body.dark-theme .label-danger {
+    background-color: rgba(224,85,85,.18) !important;
+    color: #ff8a8a !important;
+    border-color: rgba(224,85,85,.45) !important;
+}
+html[data-theme="dark"] .tag-danger > i,
+html[data-theme="dark"] .label-danger > i,
+html[data-theme="dark"] .amount-tag-negative > i,
+body.dark-theme .tag-danger > i,
+body.dark-theme .label-danger > i {
+    color: #ff8a8a !important;
+}
+
+/* warning dark */
+html[data-theme="dark"] .tag-warning,
+html[data-theme="dark"] .smit-tag-warning,
+html[data-theme="dark"] .label-warning,
+body.dark-theme .tag-warning,
+body.dark-theme .label-warning {
+    background-color: rgba(240,173,78,.15) !important;
+    color: #f0ad4e !important;
+    border-color: rgba(240,173,78,.40) !important;
+}
+
+/* info / brand dark */
+html[data-theme="dark"] .tag-info,
+html[data-theme="dark"] .smit-tag-info,
+html[data-theme="dark"] .tag-primary,
+html[data-theme="dark"] .smit-tag-primary,
+html[data-theme="dark"] .label-info,
+html[data-theme="dark"] .label-primary,
+body.dark-theme .tag-info,
+body.dark-theme .tag-primary,
+body.dark-theme .label-info,
+body.dark-theme .label-primary {
+    background-color: rgba(91,168,157,.18) !important;
+    color: #82cec3 !important;
+    border-color: rgba(91,168,157,.45) !important;
+}
+
+/* ============ 7. CONVERSATION VIEW ============ */
+html[data-theme="dark"] .conv-block,
+html[data-theme="dark"] .thread,
+html[data-theme="dark"] .thread-item,
+body.dark-theme .conv-block,
+body.dark-theme .thread,
+body.dark-theme .thread-item {
+    background-color: var(--surface-card) !important;
+    border-color: var(--border-default) !important;
+    color: var(--text-primary) !important;
+    box-shadow: var(--shadow-sm) !important;
+}
+
+html[data-theme="dark"] .thread-type-customer,
+body.dark-theme .thread-type-customer {
+    border-left: 3px solid var(--brand-primary) !important;
+}
+
+html[data-theme="dark"] .thread-type-message,
+body.dark-theme .thread-type-message {
+    background-color: color-mix(in srgb, var(--brand-primary) 5%, var(--surface-card)) !important;
+}
+
+html[data-theme="dark"] .thread-type-note,
+body.dark-theme .thread-type-note {
+    background-color: color-mix(in srgb, var(--smit-state-warn) 8%, var(--surface-card)) !important;
+    border-left: 3px solid var(--smit-state-warn) !important;
+}
+
+html[data-theme="dark"] .thread-header,
+html[data-theme="dark"] .thread-title,
+html[data-theme="dark"] .thread-by,
+body.dark-theme .thread-header,
+body.dark-theme .thread-title,
+body.dark-theme .thread-by {
+    color: var(--text-secondary) !important;
+}
+
+html[data-theme="dark"] .thread-body,
+html[data-theme="dark"] .thread-body p,
+html[data-theme="dark"] .thread-message,
+html[data-theme="dark"] .thread-content,
+body.dark-theme .thread-body,
+body.dark-theme .thread-body p,
+body.dark-theme .thread-message,
+body.dark-theme .thread-content {
+    color: var(--text-primary) !important;
+}
+
+html[data-theme="dark"] .thread-body blockquote,
+html[data-theme="dark"] .thread-message blockquote,
+html[data-theme="dark"] blockquote,
+body.dark-theme blockquote {
+    background-color: var(--surface-muted) !important;
+    border-left: 3px solid var(--border-default) !important;
+    color: var(--text-secondary) !important;
+}
+
+html[data-theme="dark"] .conv-sidebar,
+html[data-theme="dark"] .sidebar-2col-info,
+html[data-theme="dark"] .conv-info-block,
+html[data-theme="dark"] .conv-prev-conv,
+html[data-theme="dark"] .conv-prev-list,
+body.dark-theme .conv-sidebar,
+body.dark-theme .conv-info-block,
+body.dark-theme .conv-prev-conv,
+body.dark-theme .conv-prev-list {
+    background-color: var(--surface-card) !important;
+    border-color: var(--border-default) !important;
+    color: var(--text-primary) !important;
+}
+
+html[data-theme="dark"] #conv-subject,
+html[data-theme="dark"] .conv-customer-info,
+html[data-theme="dark"] .customer-name,
+body.dark-theme #conv-subject {
+    color: var(--text-primary) !important;
+}
+
+html[data-theme="dark"] #conv-toolbar,
+html[data-theme="dark"] .conv-toolbar,
+body.dark-theme #conv-toolbar {
+    background-color: var(--surface-card) !important;
+    border-color: var(--border-default) !important;
+}
+
+/* ============ 8. REPLY EDITOR (Trumbowyg / CKEditor / Summernote) ============ */
+html[data-theme="dark"] .trumbowyg-box,
+html[data-theme="dark"] .trumbowyg-editor,
+body.dark-theme .trumbowyg-box,
+body.dark-theme .trumbowyg-editor {
+    background-color: var(--surface-card) !important;
+    color: var(--text-primary) !important;
+    border-color: var(--border-default) !important;
+}
+html[data-theme="dark"] .trumbowyg-button-pane,
+body.dark-theme .trumbowyg-button-pane {
+    background-color: var(--surface-muted) !important;
+    border-bottom-color: var(--border-default) !important;
+}
+html[data-theme="dark"] .trumbowyg-button-pane button,
+body.dark-theme .trumbowyg-button-pane button {
+    color: var(--text-secondary) !important;
+}
+
+/* Summernote (FreeScout default) */
+html[data-theme="dark"] .note-editor.note-frame,
+body.dark-theme .note-editor.note-frame {
+    background-color: var(--surface-card) !important;
+    border-color: var(--border-default) !important;
+}
+html[data-theme="dark"] .note-toolbar,
+html[data-theme="dark"] .note-statusbar,
+body.dark-theme .note-toolbar,
+body.dark-theme .note-statusbar {
+    background-color: var(--surface-muted) !important;
+    border-color: var(--border-default) !important;
+}
+html[data-theme="dark"] .note-editable,
+body.dark-theme .note-editable {
+    background-color: var(--surface-card) !important;
+    color: var(--text-primary) !important;
+}
+html[data-theme="dark"] .note-btn,
+html[data-theme="dark"] .note-editor .btn-default,
+body.dark-theme .note-btn,
+body.dark-theme .note-editor .btn-default {
+    background-color: var(--surface-muted) !important;
+    border-color: var(--border-default) !important;
+    color: var(--text-primary) !important;
+}
+html[data-theme="dark"] .note-btn:hover,
+html[data-theme="dark"] .note-editor .btn-default:hover,
+body.dark-theme .note-btn:hover,
+body.dark-theme .note-editor .btn-default:hover {
+    background-color: var(--surface-toolbar) !important;
+}
+
+html[data-theme="dark"] .conv-reply-block,
+body.dark-theme .conv-reply-block {
+    background-color: var(--surface-card) !important;
+    border-color: var(--border-default) !important;
+}
+
+/* ============ 9. MODALS DARK (billing-exact) ============ */
+html[data-theme="dark"] .modal-content,
+body.dark-theme .modal-content {
+    background-color: #22262e !important;
+    border: 1px solid #3a3f47 !important;
+    border-radius: 12px !important;
+    color: #e4e6ea !important;
+    box-shadow: 0 28px 80px rgba(0,0,0,.65), 0 12px 32px rgba(0,0,0,.45) !important;
+}
+html[data-theme="dark"] .modal-header,
+body.dark-theme .modal-header {
+    border-bottom: 1px solid #2f333b !important;
+    background-color: #1f2229 !important;
+    padding: 16px 22px !important;
+}
+html[data-theme="dark"] .modal-header .modal-title,
+body.dark-theme .modal-header .modal-title {
+    color: #e4e6ea !important;
+    font-size: 15px !important;
+    font-weight: 600 !important;
+}
+html[data-theme="dark"] .modal-header .modal-title .glyphicon,
+html[data-theme="dark"] .modal-header .modal-title .fa,
+html[data-theme="dark"] .modal-header .modal-title > i,
+body.dark-theme .modal-header .modal-title .glyphicon,
+body.dark-theme .modal-header .modal-title > i {
+    color: #43b77a !important;
+}
+html[data-theme="dark"] .modal-header .modal-title-badge,
+html[data-theme="dark"] .modal-header .badge,
+body.dark-theme .modal-header .modal-title-badge {
+    background-color: rgba(91,168,157,.15) !important;
+    color: #82cec3 !important;
+    border-color: rgba(91,168,157,.35) !important;
+}
+html[data-theme="dark"] .modal-header .close,
+body.dark-theme .modal-header .close {
+    color: #9ca3af !important;
+    text-shadow: none !important;
+    opacity: 1 !important;
+}
+html[data-theme="dark"] .modal-header .close:hover,
+body.dark-theme .modal-header .close:hover {
+    background-color: rgba(255,255,255,.08) !important;
+    color: #e4e6ea !important;
+}
+html[data-theme="dark"] .modal-body,
+body.dark-theme .modal-body {
+    background-color: #22262e !important;
+    color: #e4e6ea !important;
+}
+html[data-theme="dark"] .modal-footer,
+body.dark-theme .modal-footer {
+    border-top: 1px solid #2f333b !important;
+    background-color: #1f2229 !important;
+    padding: 14px 22px !important;
+}
+html[data-theme="dark"] .modal-backdrop.in,
+body.dark-theme .modal-backdrop.in {
+    background: rgba(0,0,0,.65) !important;
+    opacity: 1 !important;
+}
+
+/* Form fields внутри dark modal */
+html[data-theme="dark"] .modal-body label,
+html[data-theme="dark"] .modal-body .control-label,
+body.dark-theme .modal-body label,
+body.dark-theme .modal-body .control-label {
+    color: #c0c4cc !important;
+    font-size: 12.5px !important;
+    font-weight: 500 !important;
+}
+html[data-theme="dark"] .modal-body .form-control,
+html[data-theme="dark"] .modal-body input,
+html[data-theme="dark"] .modal-body select,
+html[data-theme="dark"] .modal-body textarea,
+body.dark-theme .modal-body .form-control {
+    background-color: #2a2e37 !important;
+    border-color: #454950 !important;
+    color: #e4e6ea !important;
+    border-radius: 6px !important;
+}
+html[data-theme="dark"] .modal-body .form-control:focus,
+body.dark-theme .modal-body .form-control:focus {
+    background-color: #2a2e37 !important;
+    border-color: #5BA89D !important;
+    box-shadow: 0 0 0 3px rgba(91,168,157,.25) !important;
+}
+html[data-theme="dark"] .modal-body .form-control::placeholder,
+body.dark-theme .modal-body .form-control::placeholder {
+    color: #6c757d !important;
+}
+html[data-theme="dark"] .modal-body .help-block,
+html[data-theme="dark"] .modal-body small.text-muted,
+html[data-theme="dark"] .modal-body .text-help,
+body.dark-theme .modal-body .help-block {
+    color: #9ca3af !important;
+}
+
+/* Sub-card в dark — зелёный border + полупрозрачный зелёный фон */
+html[data-theme="dark"] .modal-body .sub-card,
+html[data-theme="dark"] .modal-body .modal-sub-section,
+body.dark-theme .modal-body .sub-card {
+    background-color: rgba(67,183,122,.05) !important;
+    border-color: rgba(67,183,122,.40) !important;
+}
+html[data-theme="dark"] .modal-body .sub-card-title,
+html[data-theme="dark"] .modal-body .modal-sub-section-title,
+body.dark-theme .modal-body .sub-card-title {
+    color: #82cec3 !important;
+}
+
+/* Info-блок dark */
+html[data-theme="dark"] .modal-body .info-hint,
+html[data-theme="dark"] .modal-body .alert-info,
+body.dark-theme .modal-body .info-hint {
+    background-color: rgba(91,168,157,.08) !important;
+    border-left-color: #5BA89D !important;
+    color: #c0c4cc !important;
+}
+
+/* Checkboxes в dark modal */
+html[data-theme="dark"] .modal-body label.checkbox.plain,
+html[data-theme="dark"] .modal-body .checkbox-inline,
+body.dark-theme .modal-body label.checkbox.plain {
+    color: #e4e6ea !important;
+}
+
+/* Nav tabs внутри dark modal — billing-exact (зелёное подчёркивание active) */
+html[data-theme="dark"] .modal .nav-tabs,
+body.dark-theme .modal .nav-tabs {
+    border-bottom: 1px solid #3a3f47 !important;
+    background: transparent !important;
+    padding: 0 !important;
+    margin-bottom: 22px !important;
+}
+html[data-theme="dark"] .modal .nav-tabs > li,
+body.dark-theme .modal .nav-tabs > li {
+    margin-bottom: -1px !important;
+}
+html[data-theme="dark"] .modal .nav-tabs > li > a,
+body.dark-theme .modal .nav-tabs > li > a {
+    background: transparent !important;
+    border: none !important;
+    border-bottom: 2px solid transparent !important;
+    color: #9ca3af !important;
+    padding: 10px 18px !important;
+    margin: 0 !important;
+    font-size: 13px !important;
+    font-weight: 500 !important;
+    border-radius: 0 !important;
+}
+html[data-theme="dark"] .modal .nav-tabs > li > a:hover,
+body.dark-theme .modal .nav-tabs > li > a:hover {
+    color: #82cec3 !important;
+    background: transparent !important;
+    border-bottom-color: rgba(91,168,157,.40) !important;
+}
+html[data-theme="dark"] .modal .nav-tabs > li.active > a,
+html[data-theme="dark"] .modal .nav-tabs > li.active > a:hover,
+html[data-theme="dark"] .modal .nav-tabs > li.active > a:focus,
+body.dark-theme .modal .nav-tabs > li.active > a,
+body.dark-theme .modal .nav-tabs > li.active > a:hover {
+    color: #43b77a !important;
+    background: transparent !important;
+    border: none !important;
+    border-bottom: 2px solid #43b77a !important;
+    font-weight: 600 !important;
+}
+
+/* Info-иконка (ⓘ) рядом с label dark */
+html[data-theme="dark"] .modal-body label .glyphicon-info-sign,
+html[data-theme="dark"] .modal-body label .fa-info-circle,
+html[data-theme="dark"] .modal-body label .info-icon,
+body.dark-theme .modal-body label .glyphicon-info-sign {
+    color: #5BA89D !important;
+    font-size: 12px !important;
+    margin-left: 4px !important;
+    cursor: help;
+}
+
+/* Eye-icon для password fields */
+html[data-theme="dark"] .modal-body .input-eye,
+html[data-theme="dark"] .modal-body .password-toggle,
+body.dark-theme .modal-body .input-eye {
+    color: #9ca3af !important;
+}
+html[data-theme="dark"] .modal-body .input-eye:hover,
+body.dark-theme .modal-body .input-eye:hover {
+    color: #82cec3 !important;
+}
+
+/* ============ MATTE GLASS MODALS DARK ============ */
+body.dark-theme.smit-glass-modals .modal-backdrop,
+body.dark-theme.smit-glass-modals .modal-backdrop.in {
+    background: rgba(0, 0, 0, .55) !important;
+    -webkit-backdrop-filter: blur(8px) saturate(1.4);
+    backdrop-filter: blur(8px) saturate(1.4);
+}
+
+body.dark-theme.smit-glass-modals .modal-content,
+html[data-theme="dark"] body.smit-glass-modals .modal-content {
+    background-color: rgba(34, 38, 46, .78) !important;
+    -webkit-backdrop-filter: blur(28px) saturate(1.6);
+    backdrop-filter: blur(28px) saturate(1.6);
+    border: 1px solid rgba(255, 255, 255, .08) !important;
+    box-shadow:
+        0 28px 80px rgba(0, 0, 0, .70),
+        0 12px 32px rgba(0, 0, 0, .50),
+        inset 0 1px 0 rgba(255, 255, 255, .06) !important;
+}
+
+body.dark-theme.smit-glass-modals .modal-header,
+body.dark-theme.smit-glass-modals .modal-footer {
+    background-color: rgba(31, 34, 41, .50) !important;
+    border-color: rgba(255, 255, 255, .06) !important;
+}
+
+body.dark-theme.smit-glass-modals .modal-body .form-control,
+body.dark-theme.smit-glass-modals .modal-body input,
+body.dark-theme.smit-glass-modals .modal-body select,
+body.dark-theme.smit-glass-modals .modal-body textarea {
+    background-color: rgba(42, 46, 55, .65) !important;
+    border-color: rgba(255, 255, 255, .10) !important;
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+}
+body.dark-theme.smit-glass-modals .modal-body .form-control:focus {
+    background-color: rgba(42, 46, 55, .92) !important;
+}
+
+@supports not (backdrop-filter: blur(1px)) {
+    body.dark-theme.smit-glass-modals .modal-content {
+        background-color: rgba(34, 38, 46, .98) !important;
+    }
+}
+
+/* Nav tabs внутри modal — billing style: тёмный с зеленым активным */
+html[data-theme="dark"] .modal .nav-tabs,
+body.dark-theme .modal .nav-tabs {
+    border-bottom-color: var(--border-default) !important;
+}
+html[data-theme="dark"] .modal .nav-tabs > li > a,
+body.dark-theme .modal .nav-tabs > li > a {
+    color: var(--text-secondary) !important;
+    background-color: transparent !important;
+    border-color: transparent !important;
+}
+html[data-theme="dark"] .modal .nav-tabs > li > a:hover,
+body.dark-theme .modal .nav-tabs > li > a:hover {
+    color: var(--brand-primary-light) !important;
+    background-color: var(--surface-muted) !important;
+}
+html[data-theme="dark"] .modal .nav-tabs > li.active > a,
+html[data-theme="dark"] .modal .nav-tabs > li.active > a:hover,
+body.dark-theme .modal .nav-tabs > li.active > a,
+body.dark-theme .modal .nav-tabs > li.active > a:hover {
+    color: var(--brand-primary-light) !important;
+    background-color: var(--surface-card) !important;
+    border-color: var(--border-default) var(--border-default) var(--surface-card) !important;
+    border-top: 2px solid var(--brand-primary) !important;
+}
+
+/* ============ 10. DROPDOWNS (billing-exact) ============ */
+html[data-theme="dark"] .dropdown-menu,
+body.dark-theme .dropdown-menu {
+    background-color: #2a2e37 !important;
+    border: 1px solid #3a3f47 !important;
+    border-radius: 8px !important;
+    box-shadow: 0 8px 32px rgba(0,0,0,.50), 0 0 0 1px rgba(255,255,255,.02) !important;
+    padding: 4px !important;
+    margin-top: 4px !important;
+}
+html[data-theme="dark"] .dropdown-menu > li > a,
+body.dark-theme .dropdown-menu > li > a {
+    color: #e4e6ea !important;
+    padding: 8px 14px !important;
+    border-radius: 6px !important;
+    font-size: 13px !important;
+    line-height: 1.4 !important;
+    background-color: transparent !important;
+    transition: background-color .12s ease !important;
+    text-align: left !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    white-space: nowrap !important;
+}
+
+/* ============ CUSTOM SCROLLBAR (dark + light) ============ */
+/* Firefox: thin scrollbar-color */
+html[data-theme="dark"] *,
+body.dark-theme * {
+    scrollbar-width: thin;
+    scrollbar-color: #43b77a #1a1d23;
+}
+
+/* WebKit/Chromium: тонкий, brand-зелёный thumb на тёмном track */
+html[data-theme="dark"] ::-webkit-scrollbar,
+body.dark-theme ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+html[data-theme="dark"] ::-webkit-scrollbar-track,
+body.dark-theme ::-webkit-scrollbar-track {
+    background: #1a1d23;
+    border-radius: 4px;
+}
+html[data-theme="dark"] ::-webkit-scrollbar-thumb,
+body.dark-theme ::-webkit-scrollbar-thumb {
+    background: #43b77a;
+    border-radius: 4px;
+    border: 1px solid #1a1d23;
+}
+html[data-theme="dark"] ::-webkit-scrollbar-thumb:hover,
+body.dark-theme ::-webkit-scrollbar-thumb:hover {
+    background: #5BA89D;
+}
+html[data-theme="dark"] ::-webkit-scrollbar-corner,
+body.dark-theme ::-webkit-scrollbar-corner {
+    background: #1a1d23;
+}
+
+/* Scrollbar внутри dropdown-menu — узкий, тёмный */
+html[data-theme="dark"] .dropdown-menu,
+body.dark-theme .dropdown-menu {
+    max-height: 70vh !important;
+    overflow-y: auto !important;
+}
+html[data-theme="dark"] .dropdown-menu::-webkit-scrollbar,
+body.dark-theme .dropdown-menu::-webkit-scrollbar {
+    width: 6px;
+}
+html[data-theme="dark"] .dropdown-menu::-webkit-scrollbar-track,
+body.dark-theme .dropdown-menu::-webkit-scrollbar-track {
+    background: #1a1d23;
+}
+html[data-theme="dark"] .dropdown-menu::-webkit-scrollbar-thumb,
+body.dark-theme .dropdown-menu::-webkit-scrollbar-thumb {
+    background: #43b77a;
+    border-radius: 3px;
+    border: none;
+}
+/* Иконки в dropdown — бирюзовые */
+html[data-theme="dark"] .dropdown-menu > li > a .glyphicon,
+html[data-theme="dark"] .dropdown-menu > li > a .fa,
+html[data-theme="dark"] .dropdown-menu > li > a > i,
+body.dark-theme .dropdown-menu > li > a .glyphicon,
+body.dark-theme .dropdown-menu > li > a .fa,
+body.dark-theme .dropdown-menu > li > a > i {
+    color: #5BA89D !important;
+    font-size: 14px !important;
+    width: 18px !important;
+    text-align: center !important;
+    margin-right: 2px !important;
+    flex-shrink: 0 !important;
+}
+html[data-theme="dark"] .dropdown-menu > li > a:hover,
+html[data-theme="dark"] .dropdown-menu > li > a:focus,
+body.dark-theme .dropdown-menu > li > a:hover,
+body.dark-theme .dropdown-menu > li > a:focus {
+    background-color: rgba(91,168,157,.12) !important;
+    color: #82cec3 !important;
+}
+html[data-theme="dark"] .dropdown-menu > li > a:hover .glyphicon,
+html[data-theme="dark"] .dropdown-menu > li > a:hover .fa,
+html[data-theme="dark"] .dropdown-menu > li > a:hover > i,
+body.dark-theme .dropdown-menu > li > a:hover .glyphicon,
+body.dark-theme .dropdown-menu > li > a:hover .fa,
+body.dark-theme .dropdown-menu > li > a:hover > i {
+    color: #82cec3 !important;
+}
+html[data-theme="dark"] .dropdown-menu > .active > a,
+html[data-theme="dark"] .dropdown-menu > .active > a:hover,
+html[data-theme="dark"] .dropdown-menu > .active > a:focus,
+body.dark-theme .dropdown-menu > .active > a,
+body.dark-theme .dropdown-menu > .active > a:hover,
+body.dark-theme .dropdown-menu > .active > a:focus {
+    background-color: #43b77a !important;
+    color: #fff !important;
+}
+html[data-theme="dark"] .dropdown-menu > .active > a .glyphicon,
+html[data-theme="dark"] .dropdown-menu > .active > a > i,
+body.dark-theme .dropdown-menu > .active > a .glyphicon,
+body.dark-theme .dropdown-menu > .active > a > i {
+    color: #fff !important;
+}
+html[data-theme="dark"] .dropdown-menu > .divider,
+body.dark-theme .dropdown-menu > .divider {
+    background-color: #3a3f47 !important;
+    margin: 4px 0 !important;
+}
+html[data-theme="dark"] .dropdown-header,
+body.dark-theme .dropdown-header {
+    color: #9ca3af !important;
+    padding: 6px 14px !important;
+    font-size: 11px !important;
+    text-transform: uppercase !important;
+    letter-spacing: .5px !important;
+}
+
+/* ============ SMIT BILLING SIDEBAR (DARK) ============ */
+html[data-theme="dark"] .sidebar-block,
+html[data-theme="dark"] .smit-billing-widget,
+html[data-theme="dark"] .billing-widget,
+html[data-theme="dark"] .smit-billing-sidebar,
+body.dark-theme .sidebar-block,
+body.dark-theme .smit-billing-widget,
+body.dark-theme .billing-widget,
+body.dark-theme .smit-billing-sidebar {
+    background-color: #22262e !important;
+    border: 1px solid #3a3f47 !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,.40) !important;
+    color: #e4e6ea !important;
+}
+
+html[data-theme="dark"] .smit-billing-widget .ab-header,
+html[data-theme="dark"] .billing-widget .ab-header,
+html[data-theme="dark"] .smit-billing-widget h3,
+body.dark-theme .smit-billing-widget .ab-header,
+body.dark-theme .smit-billing-widget h3 {
+    color: #e4e6ea !important;
+}
+
+/* Chip-line dark */
+html[data-theme="dark"] .smit-billing-widget .ab-chip,
+html[data-theme="dark"] .smit-billing-widget .badge,
+html[data-theme="dark"] .smit-billing-widget .label,
+html[data-theme="dark"] .billing-widget .ab-chip,
+body.dark-theme .smit-billing-widget .ab-chip,
+body.dark-theme .smit-billing-widget .badge,
+body.dark-theme .smit-billing-widget .label {
+    background-color: #2a2e37 !important;
+    border-color: #3a3f47 !important;
+    color: #c0c4cc !important;
+}
+html[data-theme="dark"] .smit-billing-widget .ab-chip-success,
+html[data-theme="dark"] .smit-billing-widget .label-success,
+body.dark-theme .smit-billing-widget .ab-chip-success {
+    background-color: rgba(67,183,122,.18) !important;
+    color: #6fcd99 !important;
+    border-color: rgba(67,183,122,.40) !important;
+}
+html[data-theme="dark"] .smit-billing-widget .ab-chip-danger,
+html[data-theme="dark"] .smit-billing-widget .label-danger,
+body.dark-theme .smit-billing-widget .ab-chip-danger {
+    background-color: rgba(224,85,85,.18) !important;
+    color: #ff8a8a !important;
+    border-color: rgba(224,85,85,.40) !important;
+}
+html[data-theme="dark"] .smit-billing-widget .ab-chip-info,
+html[data-theme="dark"] .smit-billing-widget .label-info,
+body.dark-theme .smit-billing-widget .ab-chip-info {
+    background-color: rgba(91,168,157,.18) !important;
+    color: #82cec3 !important;
+    border-color: rgba(91,168,157,.40) !important;
+}
+
+/* Section headers dark */
+html[data-theme="dark"] .smit-billing-widget .ab-section,
+html[data-theme="dark"] .billing-widget .ab-section,
+html[data-theme="dark"] .smit-billing-widget .panel-heading,
+body.dark-theme .smit-billing-widget .ab-section {
+    color: #9ca3af !important;
+    border-top-color: #3a3f47 !important;
+    background: transparent !important;
+}
+html[data-theme="dark"] .smit-billing-widget .ab-section .glyphicon,
+body.dark-theme .smit-billing-widget .ab-section .glyphicon {
+    color: #82cec3 !important;
+}
+
+/* Finance grid cells dark */
+html[data-theme="dark"] .smit-billing-widget .ab-finance-cell,
+html[data-theme="dark"] .billing-widget .ab-finance-cell,
+body.dark-theme .smit-billing-widget .ab-finance-cell {
+    background-color: #2a2e37 !important;
+    border-color: #3a3f47 !important;
+}
+html[data-theme="dark"] .smit-billing-widget .ab-finance-cell .ab-label,
+body.dark-theme .smit-billing-widget .ab-finance-cell .ab-label {
+    color: #9ca3af !important;
+}
+html[data-theme="dark"] .smit-billing-widget .ab-finance-cell .ab-value,
+body.dark-theme .smit-billing-widget .ab-finance-cell .ab-value {
+    color: #e4e6ea !important;
+}
+html[data-theme="dark"] .smit-billing-widget .ab-finance-cell .ab-value.text-success,
+body.dark-theme .smit-billing-widget .ab-finance-cell .ab-value.text-success {
+    color: #6fcd99 !important;
+}
+html[data-theme="dark"] .smit-billing-widget .ab-finance-cell .ab-value.text-danger,
+body.dark-theme .smit-billing-widget .ab-finance-cell .ab-value.text-danger {
+    color: #ff8a8a !important;
+}
+
+/* "Полная карточка" button — brand gradient остаётся */
+html[data-theme="dark"] .smit-billing-widget .ab-fullcard-btn,
+body.dark-theme .smit-billing-widget .ab-fullcard-btn {
+    box-shadow: 0 2px 6px rgba(0,0,0,.35), 0 0 0 1px rgba(91,168,157,.20) !important;
+}
+
+/* Tables inside sidebar dark */
+html[data-theme="dark"] .smit-billing-widget table th,
+body.dark-theme .smit-billing-widget table th {
+    color: #9ca3af !important;
+    border-bottom-color: #3a3f47 !important;
+}
+html[data-theme="dark"] .smit-billing-widget table td,
+body.dark-theme .smit-billing-widget table td {
+    border-top-color: #2f333b !important;
+    color: #e4e6ea !important;
+}
+
+/* Session ключ:значение dark */
+html[data-theme="dark"] .smit-billing-widget .ab-session-key,
+body.dark-theme .smit-billing-widget .ab-session-key {
+    color: #9ca3af !important;
+}
+html[data-theme="dark"] .smit-billing-widget .ab-session-val,
+body.dark-theme .smit-billing-widget .ab-session-val {
+    color: #e4e6ea !important;
+}
+
+/* "Активная сессия" badge */
+html[data-theme="dark"] .smit-billing-widget .ab-session-active,
+body.dark-theme .smit-billing-widget .ab-session-active {
+    background-color: rgba(67,183,122,.18) !important;
+    color: #6fcd99 !important;
+    border: 1px solid rgba(67,183,122,.40) !important;
+    padding: 4px 10px !important;
+    border-radius: 12px !important;
+    font-size: 11.5px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 4px !important;
+}
+
+/* ============ TICKET CARDS DARK ============ */
+html[data-theme="dark"] .smit-billing-widget .ab-ticket-card,
+html[data-theme="dark"] .billing-widget .ab-ticket-card,
+html[data-theme="dark"] .smit-billing-widget .helpdesk-ticket,
+body.dark-theme .smit-billing-widget .ab-ticket-card {
+    background-color: #2a2e37 !important;
+    border: 1px solid #3a3f47 !important;
+    border-left: 3px solid #5BA89D !important;
+    color: #e4e6ea !important;
+}
+html[data-theme="dark"] .smit-billing-widget .ab-ticket-card.ticket-waiting,
+body.dark-theme .smit-billing-widget .ab-ticket-card.ticket-waiting {
+    border-left-color: #f0ad4e !important;
+}
+html[data-theme="dark"] .smit-billing-widget .ab-ticket-card.ticket-danger,
+body.dark-theme .smit-billing-widget .ab-ticket-card.ticket-danger {
+    border-left-color: #e05555 !important;
+}
+html[data-theme="dark"] .smit-billing-widget .ab-ticket-card .ab-ticket-num,
+html[data-theme="dark"] .smit-billing-widget .ab-ticket-card .ab-ticket-date,
+body.dark-theme .smit-billing-widget .ab-ticket-card .ab-ticket-num {
+    color: #9ca3af !important;
+}
+html[data-theme="dark"] .smit-billing-widget .ab-ticket-card .ab-ticket-title,
+body.dark-theme .smit-billing-widget .ab-ticket-card .ab-ticket-title {
+    color: #e4e6ea !important;
+}
+html[data-theme="dark"] .smit-billing-widget .ab-ticket-card .ab-ticket-meta,
+body.dark-theme .smit-billing-widget .ab-ticket-card .ab-ticket-meta {
+    color: #9ca3af !important;
+}
+
+/* Sent messages list dark */
+html[data-theme="dark"] .smit-billing-widget .ab-msg-row,
+html[data-theme="dark"] .billing-widget .ab-msg-row,
+body.dark-theme .smit-billing-widget .ab-msg-row {
+    border-bottom-color: #2f333b !important;
+    color: #e4e6ea !important;
+}
+html[data-theme="dark"] .smit-billing-widget .ab-msg-row .ab-msg-time,
+body.dark-theme .smit-billing-widget .ab-msg-row .ab-msg-time {
+    color: #9ca3af !important;
+}
+html[data-theme="dark"] .smit-billing-widget .ab-msg-row .ab-msg-title,
+body.dark-theme .smit-billing-widget .ab-msg-row .ab-msg-title {
+    color: #e4e6ea !important;
+}
+html[data-theme="dark"] .smit-billing-widget .ab-msg-row .ab-msg-body,
+body.dark-theme .smit-billing-widget .ab-msg-row .ab-msg-body {
+    color: #9ca3af !important;
+}
+
+/* Channel quick-buttons dark */
+html[data-theme="dark"] .smit-billing-widget .ab-channel-row,
+body.dark-theme .smit-billing-widget .ab-channel-row {
+    border-top-color: #3a3f47 !important;
+}
+html[data-theme="dark"] .smit-billing-widget .ab-channel-btn,
+body.dark-theme .smit-billing-widget .ab-channel-btn {
+    background-color: #2a2e37 !important;
+    border-color: #454950 !important;
+    color: #c0c4cc !important;
+}
+html[data-theme="dark"] .smit-billing-widget .ab-channel-btn:hover,
+body.dark-theme .smit-billing-widget .ab-channel-btn:hover {
+    border-color: #5BA89D !important;
+    background-color: rgba(91,168,157,.15) !important;
+    color: #82cec3 !important;
+}
+html[data-theme="dark"] .smit-billing-widget .ab-channel-btn.ab-channel-sms,
+html[data-theme="dark"] .smit-billing-widget .ab-channel-btn.ab-channel-email,
+body.dark-theme .smit-billing-widget .ab-channel-btn.ab-channel-sms {
+    border-color: rgba(67,183,122,.45) !important;
+    color: #6fcd99 !important;
+}
+html[data-theme="dark"] .smit-billing-widget .ab-channel-btn.ab-channel-lk,
+body.dark-theme .smit-billing-widget .ab-channel-btn.ab-channel-lk {
+    border-color: rgba(91,168,157,.45) !important;
+    color: #82cec3 !important;
+}
+html[data-theme="dark"] .smit-billing-widget .ab-channel-btn.ab-channel-push,
+body.dark-theme .smit-billing-widget .ab-channel-btn.ab-channel-push {
+    border-color: rgba(240,173,78,.45) !important;
+    color: #f0ad4e !important;
+}
+
+/* Контакты и действия dark */
+html[data-theme="dark"] .smit-billing-widget .ab-contact-row,
+body.dark-theme .smit-billing-widget .ab-contact-row {
+    color: #e4e6ea !important;
+}
+html[data-theme="dark"] .smit-billing-widget .ab-contact-row .glyphicon,
+html[data-theme="dark"] .smit-billing-widget .ab-contact-row > i,
+body.dark-theme .smit-billing-widget .ab-contact-row .glyphicon {
+    color: #82cec3 !important;
+}
+html[data-theme="dark"] .smit-billing-widget .ab-contact-row a,
+body.dark-theme .smit-billing-widget .ab-contact-row a {
+    color: #82cec3 !important;
+}
+html[data-theme="dark"] .smit-billing-widget .ab-contact-row a:hover,
+body.dark-theme .smit-billing-widget .ab-contact-row a:hover {
+    color: #a8ddd4 !important;
+}
+
+/* Chevron dark */
+html[data-theme="dark"] .smit-billing-widget .ab-section .ab-section-chevron,
+body.dark-theme .smit-billing-widget .ab-section .ab-section-chevron {
+    color: #6c757d !important;
+}
+
+/* Status circles dark — те же цвета (контраст ок) */
+
+/* Session badges dark */
+html[data-theme="dark"] .smit-billing-widget .ab-session-badge,
+body.dark-theme .smit-billing-widget .ab-session-badge {
+    background-color: rgba(91,168,157,.15) !important;
+    color: #82cec3 !important;
+    border-color: rgba(91,168,157,.40) !important;
+}
+html[data-theme="dark"] .smit-billing-widget .ab-session-badge.active,
+body.dark-theme .smit-billing-widget .ab-session-badge.active {
+    background-color: rgba(67,183,122,.15) !important;
+    color: #6fcd99 !important;
+    border-color: rgba(67,183,122,.40) !important;
+}
+
+/* Hover-row внутри таблицы аккаунтов dark — brand-glow */
+html[data-theme="dark"] .smit-billing-widget table tbody tr:hover,
+body.dark-theme .smit-billing-widget table tbody tr:hover {
+    background-color: rgba(91,168,157,.10) !important;
+}
+
+/* ============ WEB NOTIFICATIONS DROPDOWN (billing-style) ============ */
+html[data-theme="dark"] .web-notifications .dropdown-menu,
+body.dark-theme .web-notifications .dropdown-menu,
+html[data-theme="dark"] .notifications-dropdown,
+body.dark-theme .notifications-dropdown {
+    background-color: #22262e !important;
+    border: 1px solid #3a3f47 !important;
+    border-radius: 10px !important;
+    box-shadow: 0 12px 40px rgba(0,0,0,.55) !important;
+    min-width: 420px !important;
+    max-width: 560px !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+}
+
+/* Заголовок dropdown */
+html[data-theme="dark"] .web-notifications .dropdown-header,
+body.dark-theme .web-notifications .dropdown-header,
+html[data-theme="dark"] .wn-header,
+body.dark-theme .wn-header,
+html[data-theme="dark"] .notifications-header,
+body.dark-theme .notifications-header {
+    background-color: #2a2e37 !important;
+    color: #e4e6ea !important;
+    padding: 14px 18px !important;
+    font-size: 15px !important;
+    font-weight: 600 !important;
+    border-bottom: 1px solid #3a3f47 !important;
+    text-transform: none !important;
+    letter-spacing: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+}
+
+/* "Mark all as read" link */
+html[data-theme="dark"] .web-notifications .dropdown-menu a.wn-mark-read,
+html[data-theme="dark"] .web-notifications .notifications-mark-read,
+body.dark-theme .web-notifications a.wn-mark-read,
+body.dark-theme .web-notifications .notifications-mark-read {
+    color: #82cec3 !important;
+    font-size: 12px !important;
+    font-weight: 500 !important;
+    text-decoration: none !important;
+}
+
+/* Date dividers */
+html[data-theme="dark"] .wn-date-divider,
+body.dark-theme .wn-date-divider,
+html[data-theme="dark"] .web-notifications .notifications-day,
+body.dark-theme .web-notifications .notifications-day {
+    background-color: #1a1d23 !important;
+    color: #9ca3af !important;
+    padding: 8px 18px !important;
+    font-size: 11px !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    letter-spacing: .8px !important;
+    border-top: 1px solid #3a3f47 !important;
+    border-bottom: 1px solid #3a3f47 !important;
+}
+
+/* Notification item */
+html[data-theme="dark"] .web-notifications .wn-item,
+html[data-theme="dark"] .web-notifications li,
+body.dark-theme .web-notifications .wn-item,
+body.dark-theme .web-notifications li {
+    border-bottom: 1px solid #2f333b !important;
+    padding: 12px 18px !important;
+    background-color: #22262e !important;
+    transition: background-color .12s ease !important;
+}
+html[data-theme="dark"] .web-notifications .wn-item:nth-child(even),
+body.dark-theme .web-notifications .wn-item:nth-child(even) {
+    background-color: #262a32 !important;
+}
+html[data-theme="dark"] .web-notifications .wn-item:hover,
+html[data-theme="dark"] .web-notifications li:hover,
+body.dark-theme .web-notifications .wn-item:hover,
+body.dark-theme .web-notifications li:hover {
+    background-color: rgba(91,168,157,.10) !important;
+}
+html[data-theme="dark"] .web-notifications .wn-unread,
+body.dark-theme .web-notifications .wn-unread {
+    background-color: rgba(91,168,157,.08) !important;
+    border-left: 3px solid #5BA89D !important;
+}
+
+/* Notification text */
+html[data-theme="dark"] .web-notifications .wn-item a,
+html[data-theme="dark"] .web-notifications .wn-item-body,
+html[data-theme="dark"] .web-notifications .wn-item strong,
+body.dark-theme .web-notifications .wn-item a,
+body.dark-theme .web-notifications .wn-item strong {
+    color: #e4e6ea !important;
+}
+html[data-theme="dark"] .web-notifications .wn-item .text-muted,
+html[data-theme="dark"] .web-notifications .wn-item .wn-item-text,
+body.dark-theme .web-notifications .wn-item .text-muted,
+body.dark-theme .web-notifications .wn-item .wn-item-text {
+    color: #9ca3af !important;
+    font-size: 12.5px !important;
+    margin-top: 2px !important;
+}
+
+/* Avatar inside notification (initials) */
+html[data-theme="dark"] .web-notifications .person-photo,
+html[data-theme="dark"] .web-notifications .wn-item .avatar,
+body.dark-theme .web-notifications .person-photo,
+body.dark-theme .web-notifications .wn-item .avatar {
+    background-color: #3a3f47 !important;
+    color: #e4e6ea !important;
+    border: 1px solid #454950 !important;
+}
+
+/* Empty state */
+html[data-theme="dark"] .web-notifications .wn-empty,
+body.dark-theme .web-notifications .wn-empty {
+    color: #9ca3af !important;
+    padding: 30px 20px !important;
+    text-align: center !important;
+}
+
+/* Bell button + red dot */
+html[data-theme="dark"] .web-notifications-toggle .glyphicon,
+html[data-theme="dark"] .navbar .web-notifications > a .glyphicon,
+body.dark-theme .web-notifications-toggle .glyphicon,
+body.dark-theme .navbar .web-notifications > a .glyphicon {
+    color: rgba(255,255,255,.92) !important;
+    font-size: 17px !important;
+}
+.web-notifications .wn-counter,
+.web-notifications .badge-counter,
+.web-notifications .notifications-counter {
+    background-color: #e05555 !important;
+    color: #fff !important;
+    border-radius: 50% !important;
+    width: 8px !important;
+    height: 8px !important;
+    min-width: 8px !important;
+    padding: 0 !important;
+    font-size: 0 !important;
+    position: absolute !important;
+    top: 12px !important;
+    right: 8px !important;
+    border: 2px solid #1f5a52 !important;
+}
+html[data-theme="dark"] .web-notifications .wn-counter,
+body.dark-theme .web-notifications .wn-counter {
+    border-color: #1f5a52 !important;
+}
+
+/* ============ 11. SELECT2 DARK ============ */
+html[data-theme="dark"] .select2-container--default .select2-selection--single,
+html[data-theme="dark"] .select2-container--default .select2-selection--multiple,
+body.dark-theme .select2-container--default .select2-selection--single,
+body.dark-theme .select2-container--default .select2-selection--multiple {
+    background-color: var(--surface-card) !important;
+    border-color: var(--border-default) !important;
+    color: var(--text-primary) !important;
+}
+html[data-theme="dark"] .select2-container--default .select2-selection--single .select2-selection__rendered,
+body.dark-theme .select2-container--default .select2-selection--single .select2-selection__rendered {
+    color: var(--text-primary) !important;
+}
+html[data-theme="dark"] .select2-container--default .select2-selection--single .select2-selection__placeholder,
+body.dark-theme .select2-container--default .select2-selection--single .select2-selection__placeholder {
+    color: var(--text-muted) !important;
+}
+html[data-theme="dark"] .select2-dropdown,
+body.dark-theme .select2-dropdown {
+    background-color: var(--surface-card) !important;
+    border-color: var(--border-default) !important;
+    color: var(--text-primary) !important;
+}
+html[data-theme="dark"] .select2-search--dropdown .select2-search__field,
+body.dark-theme .select2-search--dropdown .select2-search__field {
+    background-color: var(--surface-muted) !important;
+    border-color: var(--border-default) !important;
+    color: var(--text-primary) !important;
+}
+html[data-theme="dark"] .select2-container--default .select2-results__option,
+body.dark-theme .select2-container--default .select2-results__option {
+    color: var(--text-primary) !important;
+}
+html[data-theme="dark"] .select2-container--default .select2-results__option[aria-selected="true"],
+body.dark-theme .select2-container--default .select2-results__option[aria-selected="true"] {
+    background-color: var(--surface-muted) !important;
+}
+html[data-theme="dark"] .select2-container--default .select2-results__option--highlighted[aria-selected],
+body.dark-theme .select2-container--default .select2-results__option--highlighted[aria-selected] {
+    background-color: var(--brand-primary) !important;
+    color: #fff !important;
+}
+html[data-theme="dark"] .select2-container--default .select2-selection--multiple .select2-selection__choice,
+body.dark-theme .select2-container--default .select2-selection--multiple .select2-selection__choice {
+    background-color: var(--brand-primary-25) !important;
+    border-color: var(--brand-primary) !important;
+    color: var(--text-primary) !important;
+}
+
+/* ============ 12. TOOLTIPS / POPOVERS ============ */
+html[data-theme="dark"] .tooltip-inner,
+body.dark-theme .tooltip-inner {
+    background-color: var(--surface-toolbar) !important;
+    color: var(--text-primary) !important;
+    border: 1px solid var(--border-default) !important;
+}
+html[data-theme="dark"] .popover,
+body.dark-theme .popover {
+    background-color: var(--surface-card) !important;
+    border-color: var(--border-default) !important;
+    color: var(--text-primary) !important;
+    box-shadow: var(--shadow-md) !important;
+}
+html[data-theme="dark"] .popover-title,
+body.dark-theme .popover-title {
+    background-color: var(--surface-muted) !important;
+    border-bottom-color: var(--border-default) !important;
+    color: var(--text-primary) !important;
+}
+
+/* ============ 13. SmitUI INJECTED BODY-CLASSES ============ */
+/* SmitUIServiceProvider добавляет pattern.jpg фон — в dark убираем */
+html[data-theme="dark"] body.smit-dashboard,
+html[data-theme="dark"] body.smit-kanban,
+html[data-theme="dark"] body.smit-ai-sessions,
+html[data-theme="dark"] body.smit-kb,
+body.dark-theme.smit-dashboard,
+body.dark-theme.smit-kanban,
+body.dark-theme.smit-ai-sessions,
+body.dark-theme.smit-kb {
+    background-image: none !important;
+    background-color: var(--surface-page) !important;
+}
+
+/* Dashboard cards */
+html[data-theme="dark"] body.smit-dashboard .dash-card,
+body.dark-theme.smit-dashboard .dash-card {
+    background: var(--surface-card) !important;
+    border-color: var(--border-default) !important;
+    box-shadow: var(--shadow-md) !important;
+}
+html[data-theme="dark"] body.smit-dashboard .dash-card:hover,
+body.dark-theme.smit-dashboard .dash-card:hover {
+    box-shadow: var(--shadow-lg) !important;
+    border-top-color: var(--brand-primary) !important;
+}
+html[data-theme="dark"] body.smit-dashboard .dash-card-content h3 a,
+body.dark-theme.smit-dashboard .dash-card-content h3 a {
+    color: var(--text-primary) !important;
+}
+html[data-theme="dark"] body.smit-dashboard .dash-card-link,
+html[data-theme="dark"] body.smit-dashboard .dash-card-footer a,
+body.dark-theme.smit-dashboard .dash-card-link,
+body.dark-theme.smit-dashboard .dash-card-footer a {
+    color: var(--text-secondary) !important;
+}
+html[data-theme="dark"] body.smit-dashboard .dash-card-list-item,
+body.dark-theme.smit-dashboard .dash-card-list-item {
+    color: var(--text-primary) !important;
+    border-bottom-color: var(--border-subtle) !important;
+}
+html[data-theme="dark"] body.smit-dashboard .dash-card-list-item:hover,
+body.dark-theme.smit-dashboard .dash-card-list-item:hover {
+    background: var(--surface-muted) !important;
+}
+html[data-theme="dark"] body.smit-dashboard .dash-card-list-item strong,
+body.dark-theme.smit-dashboard .dash-card-list-item strong {
+    color: var(--text-primary) !important;
+}
+html[data-theme="dark"] body.smit-dashboard .dash-card-list-item strong.has-value,
+body.dark-theme.smit-dashboard .dash-card-list-item strong.has-value {
+    color: var(--brand-primary-light) !important;
+}
+html[data-theme="dark"] body.smit-dashboard .dash-card-list-item .waiting-since,
+body.dark-theme.smit-dashboard .dash-card-list-item .waiting-since {
+    color: var(--text-muted) !important;
+}
+html[data-theme="dark"] body.smit-dashboard .dash-card-footer,
+body.dark-theme.smit-dashboard .dash-card-footer {
+    background: var(--surface-muted) !important;
+    border-top-color: var(--border-default) !important;
+}
+html[data-theme="dark"] body.smit-dashboard .heading,
+body.dark-theme.smit-dashboard .heading {
+    color: var(--text-primary) !important;
+    text-shadow: none !important;
+}
+
+/* Kanban dark */
+html[data-theme="dark"] body.smit-kanban #kn-heading,
+body.dark-theme.smit-kanban #kn-heading {
+    background: var(--surface-card) !important;
+    border: 1px solid var(--border-default) !important;
+    box-shadow: var(--shadow-md) !important;
+}
+html[data-theme="dark"] body.smit-kanban #kn-heading h1,
+body.dark-theme.smit-kanban #kn-heading h1 {
+    color: var(--text-primary) !important;
+    text-shadow: none !important;
+}
+html[data-theme="dark"] body.smit-kanban .kn-col,
+body.dark-theme.smit-kanban .kn-col {
+    background: var(--surface-card) !important;
+    border: 1px solid var(--border-default) !important;
+    color: var(--text-primary) !important;
+}
+html[data-theme="dark"] body.smit-kanban .kn-col-name,
+body.dark-theme.smit-kanban .kn-col-name { color: var(--text-primary) !important; }
+html[data-theme="dark"] body.smit-kanban .kn-card,
+body.dark-theme.smit-kanban .kn-card {
+    background-color: var(--surface-muted) !important;
+    border-color: var(--border-default) !important;
+    color: var(--text-primary) !important;
+}
+
+/* AI-sessions dark */
+html[data-theme="dark"] body.smit-ai-sessions .section-heading,
+body.dark-theme.smit-ai-sessions .section-heading {
+    background: var(--surface-card) !important;
+    border-color: var(--border-default) !important;
+    box-shadow: var(--shadow-sm) !important;
+}
+html[data-theme="dark"] body.smit-ai-sessions .section-heading h1,
+body.dark-theme.smit-ai-sessions .section-heading h1 {
+    color: var(--text-primary) !important;
+    text-shadow: none !important;
+}
+html[data-theme="dark"] body.smit-ai-sessions .ai-filters,
+html[data-theme="dark"] body.smit-ai-sessions .ai-stat,
+html[data-theme="dark"] body.smit-ai-sessions .table-ai,
+body.dark-theme.smit-ai-sessions .ai-filters,
+body.dark-theme.smit-ai-sessions .ai-stat,
+body.dark-theme.smit-ai-sessions .table-ai {
+    background: var(--surface-card) !important;
+    border-color: var(--border-default) !important;
+    color: var(--text-primary) !important;
+}
+
+/* KB dark */
+html[data-theme="dark"] body.smit-kb .kb-header,
+body.dark-theme.smit-kb .kb-header {
+    background: var(--surface-card) !important;
+    border-color: var(--border-default) !important;
+    box-shadow: var(--shadow-sm) !important;
+}
+html[data-theme="dark"] body.smit-kb .kb-nav,
+html[data-theme="dark"] body.smit-kb .kb-search-bar,
+html[data-theme="dark"] body.smit-kb .kb-container,
+html[data-theme="dark"] body.smit-kb .kb-card,
+body.dark-theme.smit-kb .kb-nav,
+body.dark-theme.smit-kb .kb-search-bar,
+body.dark-theme.smit-kb .kb-container,
+body.dark-theme.smit-kb .kb-card {
+    background: var(--surface-card) !important;
+    border-color: var(--border-default) !important;
+    color: var(--text-primary) !important;
+}
+
+/* Mobile-specific SmitUI elements */
+html[data-theme="dark"] li.smit-profile-item,
+body.dark-theme li.smit-profile-item {
+    background: var(--surface-toolbar) !important;
+    border-bottom-color: var(--brand-primary) !important;
+}
+html[data-theme="dark"] .smit-icon-row,
+body.dark-theme .smit-icon-row {
+    background: var(--surface-muted) !important;
+    border-top-color: var(--border-default) !important;
+    border-bottom-color: var(--border-default) !important;
+}
+html[data-theme="dark"] .smit-icon-row > li.smit-icon-item > a,
+body.dark-theme .smit-icon-row > li.smit-icon-item > a {
+    color: var(--brand-primary-light) !important;
+}
+
+/* ============ TRANSITIONS ============ */
+html[data-theme="dark"] body,
+html[data-theme="dark"] .navbar,
+html[data-theme="dark"] .panel,
+html[data-theme="dark"] .modal-content,
+html[data-theme="dark"] .dropdown-menu,
+html[data-theme="dark"] .form-control,
+html[data-theme="dark"] .btn,
+body.dark-theme body,
+body.dark-theme .navbar,
+body.dark-theme .panel,
+body.dark-theme .modal-content,
+body.dark-theme .dropdown-menu,
+body.dark-theme .form-control,
+body.dark-theme .btn {
+    transition: background-color .2s ease, border-color .2s ease, color .15s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html[data-theme="dark"] *,
+    body.dark-theme * {
+        transition: none !important;
+    }
+}

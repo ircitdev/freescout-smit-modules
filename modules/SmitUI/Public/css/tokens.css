@@ -1,0 +1,95 @@
+/* ============================================================
+   tokens.css — SmIT design tokens (billing-aligned)
+   FreeScout SmitUI v2.0.0 (2026-05-24)
+
+   Источник: визуальный аудит SMIT Billing
+   - bg:    rgb(26, 29, 35)
+   - text:  rgb(228, 230, 234)
+   - sidebar: rgba(20, 25, 32, 0.78)
+   - input bg: rgb(42, 46, 55)
+   - input border: rgb(69, 73, 80)
+   - btn-success: #43B77A (Bootstrap-accent)
+   - brand main: #5BA89D + #82cec3 (CSS-var, mobile-app accent)
+============================================================ */
+
+:root {
+    /* ───── BRAND (billing-aligned, mobile-app teal) ───── */
+    --brand-primary:        #5BA89D;
+    --brand-primary-dark:   #4A8C82;
+    --brand-primary-darker: #3A7068;
+    --brand-primary-light:  #82cec3;
+    --brand-primary-bg:     #e8f5f3;
+    --brand-primary-12: color-mix(in srgb, var(--brand-primary) 12%, transparent);
+    --brand-primary-25: color-mix(in srgb, var(--brand-primary) 25%, transparent);
+    --brand-primary-50: color-mix(in srgb, var(--brand-primary) 50%, transparent);
+
+    /* Secondary brand — Bootstrap success accent SMIT Billing */
+    --brand-accent:         #43b77a;
+    --brand-accent-dark:    #379963;
+    --brand-accent-darker:  #2f8556;
+    --brand-accent-light:   #6fcd99;
+
+    /* ───── STATUS ───── */
+    --status-success: #43b77a;
+    --status-warning: #f0ad4e;
+    --status-danger:  #e05555;
+    --status-info:    #5bc0de;
+    --status-neutral: #6c757d;
+
+    --smit-state-ok:     #28a745;
+    --smit-state-warn:   #fd7e14;
+    --smit-state-danger: #dc3545;
+    --smit-state-info:   #0dcaf0;
+    --smit-state-muted:  #6c757d;
+
+    /* ───── SURFACES (LIGHT) ───── */
+    --surface-page:    #f5f6f8;
+    --surface-card:    #ffffff;
+    --surface-muted:   #f8f9f8;
+    --surface-toolbar: #f8f9f8;
+    --border-subtle:   #e5e7eb;
+    --border-default:  #e0e0e0;
+
+    /* ───── TEXT ───── */
+    --text-primary:    #212529;
+    --text-secondary:  #4a5568;
+    --text-muted:      #6c757d;
+
+    /* ───── FX ───── */
+    --focus-ring:        rgba(91, 168, 157, 0.30);
+    --focus-outline:     var(--brand-primary);
+    --shadow-sm: 0 1px 3px rgba(0,0,0,.06);
+    --shadow-md: 0 4px 12px rgba(0,0,0,.10);
+    --shadow-lg: 0 6px 24px rgba(0,0,0,.12);
+
+    --radius-xs: 3px;
+    --radius-sm: 4px;
+    --radius-md: 6px;
+    --radius-lg: 8px;
+    --radius-pill: 999px;
+
+    --space-1: 4px; --space-2: 8px; --space-3: 12px;
+    --space-4: 16px; --space-5: 24px; --space-6: 32px;
+
+    --font-ui: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-mono: ui-monospace, 'JetBrains Mono', Menlo, Consolas, monospace;
+}
+
+/* ───── DARK THEME (SMIT Billing brand) ───── */
+html[data-theme="dark"],
+body.dark-theme,
+[data-bs-theme="dark"] {
+    --surface-page:    #1a1d23;     /* rgb(26,29,35) */
+    --surface-card:    #2a2e37;     /* rgb(42,46,55) input bg */
+    --surface-muted:   #22262e;
+    --surface-toolbar: rgba(20, 25, 32, 0.78);  /* sidebar SMIT Billing */
+    --surface-sidebar: rgba(20, 25, 32, 0.78);
+    --border-subtle:   #353940;
+    --border-default:  #454950;     /* rgb(69,73,80) */
+    --text-primary:    #e4e6ea;     /* rgb(228,230,234) */
+    --text-secondary:  #c0c4cc;
+    --text-muted:      #9ca3af;
+    --shadow-sm: 0 1px 3px rgba(0,0,0,.40);
+    --shadow-md: 0 4px 12px rgba(0,0,0,.50);
+    --shadow-lg: 0 6px 24px rgba(0,0,0,.60);
+}

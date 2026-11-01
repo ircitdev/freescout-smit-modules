@@ -1,0 +1,17 @@
+{
+    "name": "SMIT Billing",
+    "alias": "smitbilling",
+    "description": "Данные абонента из SMIT Billing в боковой панели тикета",
+    "version": "1.0.0",
+    "author": "SMIT Dev",
+    "active": 1,
+    "order": 50,
+    "providers": [
+        "Modules\\SmitBilling\\Providers\\SmitBillingServiceProvider"
+    ],
+    "aliases": {},
+    "files": [
+        "start.php"
+    ],
+    "requires": []
+}

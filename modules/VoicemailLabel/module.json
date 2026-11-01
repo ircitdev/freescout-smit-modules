@@ -1,0 +1,11 @@
+{
+    "name": "VoicemailLabel",
+    "alias": "voicemaillabel",
+    "description": "Добавляет лейбл 55-35-59 для входящих звонков на голосовую почту",
+    "keywords": [],
+    "priority": 100,
+    "providers": [
+        "Modules\\VoicemailLabel\\Providers\\VoicemailLabelServiceProvider"
+    ],
+    "files": []
+}

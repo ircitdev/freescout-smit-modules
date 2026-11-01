@@ -1,0 +1,11 @@
+{
+    "name": "SystemFilter",
+    "alias": "systemfilter",
+    "description": "Auto-delete system tickets",
+    "version": "1.0.0",
+    "author": "SMIT",
+    "active": 1,
+    "providers": [
+        "Modules\\SystemFilter\\Providers\\SystemFilterServiceProvider"
+    ]
+}

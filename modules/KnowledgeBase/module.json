@@ -1,0 +1,12 @@
+{
+    "name": "KnowledgeBase",
+    "alias": "knowledgebase",
+    "description": "Internal knowledge base for support operators",
+    "version": "2.0.0",
+    "author": "SMIT Dev",
+    "active": 1,
+    "order": 70,
+    "providers": [
+        "Modules\\KnowledgeBase\\Providers\\KnowledgeBaseServiceProvider"
+    ]
+}

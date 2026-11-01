@@ -1,0 +1,14 @@
+{
+    "name": "BalanceMonitor",
+    "alias": "balancemonitor",
+    "description": "Отображает балансы ServerSpace, OpenAI и Mango в шапке для админов",
+    "version": "1.0.0",
+    "author": "SMIT",
+    "authorUrl": "https://smit34.ru",
+    "detailsUrl": "",
+    "active": 1,
+    "order": 100,
+    "providers": [
+        "Modules\\BalanceMonitor\\Providers\\BalanceMonitorServiceProvider"
+    ]
+}

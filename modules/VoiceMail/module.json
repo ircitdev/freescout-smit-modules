@@ -1,0 +1,18 @@
+{
+    "name": "VoiceMail",
+    "alias": "voicemail",
+    "description": "Интеграция голосовой почты 55-35-59 с GPT и AmoCRM",
+    "version": "1.0.0",
+    "author": "<a href=\"https://dev.uspeshnyy.ru\" target=\"_blank\">Uspeshnyy</a>",
+    "authorUrl": "https://dev.uspeshnyy.ru",
+    "active": 1,
+    "order": 100,
+    "providers": [
+        "Modules\\VoiceMail\\Providers\\VoiceMailServiceProvider"
+    ],
+    "aliases": {},
+    "files": [
+        "start.php"
+    ],
+    "requires": []
+}

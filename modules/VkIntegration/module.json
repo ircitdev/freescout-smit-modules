@@ -1,0 +1,18 @@
+{
+    "name": "VkIntegration",
+    "alias": "vkintegration",
+    "description": "Интеграция ВКонтакте с поддержкой Python Bridge, биллинга AIDA и полным управлением из FreeScout",
+    "version": "2.0.0",
+    "author": "<a href=\"https://dev.uspeshnyy.ru\" target=\"_blank\">Uspeshnyy</a>",
+    "authorUrl": "https://dev.uspeshnyy.ru",
+    "active": 1,
+    "order": 100,
+    "providers": [
+        "Modules\\VkIntegration\\Providers\\VkIntegrationServiceProvider"
+    ],
+    "aliases": {},
+    "files": [
+        "start.php"
+    ],
+    "requires": []
+}

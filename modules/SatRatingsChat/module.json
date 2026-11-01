@@ -1,0 +1,17 @@
+{
+    "name": "SatRatingsChat",
+    "alias": "satratingschat",
+    "description": "Satisfaction Ratings for Telegram and VK chat channels",
+    "version": "1.0.0",
+    "author": "SMIT Dev",
+    "active": 1,
+    "order": 55,
+    "providers": [
+        "Modules\\SatRatingsChat\\Providers\\SatRatingsChatServiceProvider"
+    ],
+    "aliases": {},
+    "files": [
+        "start.php"
+    ],
+    "requires": []
+}

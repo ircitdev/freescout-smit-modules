@@ -1,0 +1,15 @@
+{
+    "name": "Claude AI Assistant",
+    "alias": "claudeai",
+    "description": "AI-ассистент на Claude API для автоответов клиентам и помощи операторам",
+    "version": "1.0.0",
+    "author": "SMIT Dev",
+    "active": 1,
+    "order": 45,
+    "providers": [
+        "Modules\\ClaudeAI\\Providers\\ClaudeAIServiceProvider"
+    ],
+    "aliases": {},
+    "files": ["start.php"],
+    "requires": []
+}

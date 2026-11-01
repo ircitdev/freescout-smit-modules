@@ -1,0 +1,15 @@
+{
+    "name": "AidaSessions",
+    "alias": "aidasessions",
+    "description": "AI GPT conversation sessions viewer",
+    "version": "1.0.0",
+    "author": "SMIT Dev",
+    "active": 1,
+    "order": 60,
+    "providers": [
+        "Modules\\AidaSessions\\Providers\\AidaSessionsServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

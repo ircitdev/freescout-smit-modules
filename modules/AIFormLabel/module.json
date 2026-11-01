@@ -1,0 +1,11 @@
+{
+    "name": "AIFormLabel",
+    "alias": "aiformlabel",
+    "description": "Shows AI label for channels 100 (chat) and 101 (form)",
+    "version": "1.1.0",
+    "active": 1,
+    "order": 100,
+    "providers": [
+        "Modules\\AIFormLabel\\Providers\\AIFormLabelServiceProvider"
+    ]
+}

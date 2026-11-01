@@ -1,0 +1,27 @@
+{
+    "name": "smit/freescout-voicemail",
+    "description": "VoiceMail Integration Module for FreeScout",
+    "type": "freescout-module",
+    "license": "AGPL-3.0",
+    "authors": [
+        {
+            "name": "SMIT Support",
+            "email": "support@example.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\VoiceMail\\": ""
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Modules\\VoiceMail\\Providers\\VoiceMailServiceProvider"
+            ]
+        }
+    }
+}

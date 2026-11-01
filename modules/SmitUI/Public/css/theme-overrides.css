@@ -1,0 +1,1820 @@
+/* ============================================================
+   theme-overrides.css — SmIT brand overrides для FreeScout
+   Bootstrap 3.3.7. Light theme + brand colors.
+   Подключается ПОСЛЕ tokens.css, ДО dark.css.
+============================================================ */
+
+/* ============ SUPPORT TICKET CARDS (внутри билинг-сайдбара) ============ */
+.smit-billing-widget .ab-ticket-card,
+.billing-widget .ab-ticket-card,
+.smit-billing-widget .helpdesk-ticket,
+.billing-widget .helpdesk-ticket {
+    background-color: #fff;
+    border: 1px solid #e5e7eb;
+    border-left: 3px solid #5BA89D;
+    border-radius: 8px;
+    padding: 10px 12px;
+    margin-bottom: 8px;
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.smit-billing-widget .ab-ticket-card.ticket-waiting,
+.billing-widget .ab-ticket-card.ticket-waiting {
+    border-left-color: #f0ad4e;
+}
+.smit-billing-widget .ab-ticket-card.ticket-danger,
+.billing-widget .ab-ticket-card.ticket-danger {
+    border-left-color: #e05555;
+}
+.smit-billing-widget .ab-ticket-card .ab-ticket-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    font-weight: 500;
+}
+.smit-billing-widget .ab-ticket-card .ab-ticket-num {
+    color: #6c757d;
+    font-size: 11.5px;
+}
+.smit-billing-widget .ab-ticket-card .ab-ticket-date {
+    color: #6c757d;
+    font-size: 11px;
+}
+.smit-billing-widget .ab-ticket-card .ab-ticket-title {
+    color: #212529;
+    font-size: 12.5px;
+    line-height: 1.35;
+}
+.smit-billing-widget .ab-ticket-card .ab-ticket-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #9ca3af;
+    font-size: 11px;
+}
+
+/* Sent messages list */
+.smit-billing-widget .ab-msg-row,
+.billing-widget .ab-msg-row {
+    padding: 8px 10px;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+.smit-billing-widget .ab-msg-row .ab-msg-time,
+.billing-widget .ab-msg-row .ab-msg-time {
+    color: #9ca3af;
+    font-size: 11px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.smit-billing-widget .ab-msg-row .ab-msg-status,
+.billing-widget .ab-msg-row .ab-msg-status {
+    margin-left: auto;
+}
+.smit-billing-widget .ab-msg-row .ab-msg-title,
+.billing-widget .ab-msg-row .ab-msg-title {
+    color: #212529;
+    font-weight: 500;
+}
+.smit-billing-widget .ab-msg-row .ab-msg-body,
+.billing-widget .ab-msg-row .ab-msg-body {
+    color: #6c757d;
+    font-size: 11.5px;
+    line-height: 1.4;
+}
+
+/* Channel quick-buttons (SMS/Email/ЛК/Push) */
+.smit-billing-widget .ab-channel-row,
+.billing-widget .ab-channel-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    padding: 12px 0;
+    border-top: 1px solid #f0f0f0;
+    margin-top: 8px;
+}
+.smit-billing-widget .ab-channel-btn,
+.billing-widget .ab-channel-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px 12px;
+    border-radius: 14px;
+    font-size: 12px;
+    font-weight: 500;
+    border: 1px solid #e5e7eb;
+    background: #fff;
+    color: #495057;
+    text-decoration: none !important;
+    cursor: pointer;
+    transition: all .15s ease;
+}
+.smit-billing-widget .ab-channel-btn:hover,
+.billing-widget .ab-channel-btn:hover {
+    border-color: #5BA89D;
+    color: #5BA89D;
+    background: rgba(91,168,157,.08);
+}
+.smit-billing-widget .ab-channel-btn.ab-channel-sms { border-color: #43b77a; color: #2f8556; }
+.smit-billing-widget .ab-channel-btn.ab-channel-email { border-color: #43b77a; color: #2f8556; }
+.smit-billing-widget .ab-channel-btn.ab-channel-lk { border-color: #5BA89D; color: #3a7068; }
+.smit-billing-widget .ab-channel-btn.ab-channel-push { border-color: #f0ad4e; color: #b07820; }
+
+/* Контакты и действия — иконка + текст */
+.smit-billing-widget .ab-contact-row,
+.billing-widget .ab-contact-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 4px 0;
+    font-size: 12.5px;
+    color: #212529;
+}
+.smit-billing-widget .ab-contact-row .glyphicon,
+.smit-billing-widget .ab-contact-row > i,
+.billing-widget .ab-contact-row .glyphicon {
+    color: #5BA89D;
+    font-size: 13px;
+}
+.smit-billing-widget .ab-contact-row a,
+.billing-widget .ab-contact-row a {
+    color: #5BA89D;
+    text-decoration: none;
+}
+.smit-billing-widget .ab-contact-row a:hover {
+    color: #43b77a;
+    text-decoration: underline;
+}
+
+/* Раздел collapsible с chevron */
+.smit-billing-widget .ab-section .ab-section-chevron,
+.billing-widget .ab-section .ab-section-chevron {
+    color: #9ca3af;
+    transition: transform .2s ease;
+}
+.smit-billing-widget .ab-section.collapsed .ab-section-chevron {
+    transform: rotate(-90deg);
+}
+
+/* Status circle (зелёный/серый кружок в строке аккаунта) */
+.smit-billing-widget .ab-status-circle,
+.billing-widget .ab-status-circle {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #d1d5db;
+}
+.smit-billing-widget .ab-status-circle.online,
+.smit-billing-widget .ab-status-circle.active {
+    background: #43b77a;
+}
+.smit-billing-widget .ab-status-circle.offline {
+    background: #9ca3af;
+}
+.smit-billing-widget .ab-status-circle.danger,
+.smit-billing-widget .ab-status-circle.blocked {
+    background: #e05555;
+}
+
+/* Сессия — chip "Завершена" / "Активная" */
+.smit-billing-widget .ab-session-badge,
+.billing-widget .ab-session-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 11.5px;
+    font-weight: 500;
+    background: rgba(91,168,157,.10);
+    color: #3a7068;
+    border: 1px solid rgba(91,168,157,.30);
+    margin-bottom: 8px;
+}
+.smit-billing-widget .ab-session-badge.active,
+.billing-widget .ab-session-badge.active {
+    background: rgba(67,183,122,.10);
+    color: #2f8556;
+    border-color: rgba(67,183,122,.30);
+}
+
+/* ============ SMIT BILLING SIDEBAR (billing-style карточка абонента) ============ */
+/* Применяется ко всему контейнеру биллинг-блока в правой сайдбар-колонке FS.
+   Селекторы выбраны общие (.sidebar-block, .billing-widget) — модуль SmitBilling
+   рендерит туда HTML. */
+
+.sidebar-block,
+.smit-billing-widget,
+.billing-widget,
+.smit-billing-sidebar {
+    background-color: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,.05);
+    padding: 18px 16px;
+    margin-bottom: 16px;
+}
+
+/* Header абонента: имя + номер + close */
+.smit-billing-widget .ab-header,
+.billing-widget .ab-header,
+.smit-billing-widget h3,
+.billing-widget h3 {
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    color: #212529 !important;
+    margin: 0 0 12px 0 !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: none !important;
+}
+
+/* Chip-line: статус, физ.лицо, договор, IP, вкл, онлайн, СОРМ */
+.smit-billing-widget .ab-chips,
+.billing-widget .ab-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 16px;
+}
+.smit-billing-widget .ab-chip,
+.billing-widget .ab-chip,
+.smit-billing-widget .badge,
+.smit-billing-widget .label {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 4px !important;
+    padding: 3px 9px !important;
+    border-radius: 12px !important;
+    font-size: 11.5px !important;
+    font-weight: 500 !important;
+    background-color: #f8f9f8 !important;
+    border: 1px solid #e5e7eb !important;
+    color: #495057 !important;
+    line-height: 1.5 !important;
+}
+.smit-billing-widget .ab-chip-success,
+.smit-billing-widget .ab-chip.active,
+.smit-billing-widget .label-success {
+    background-color: rgba(67,183,122,.10) !important;
+    color: #2f8556 !important;
+    border-color: rgba(67,183,122,.30) !important;
+}
+.smit-billing-widget .ab-chip-danger,
+.smit-billing-widget .label-danger {
+    background-color: rgba(224,85,85,.10) !important;
+    color: #c0392b !important;
+    border-color: rgba(224,85,85,.30) !important;
+}
+.smit-billing-widget .ab-chip-info,
+.smit-billing-widget .label-info {
+    background-color: rgba(91,168,157,.10) !important;
+    color: #3a7068 !important;
+    border-color: rgba(91,168,157,.30) !important;
+}
+
+/* Раздел «Финансы / Контакты / Аккаунты / Сессия / Платежи» */
+.smit-billing-widget .ab-section,
+.billing-widget .ab-section,
+.smit-billing-widget .panel-heading {
+    font-size: 11.5px !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    letter-spacing: .5px !important;
+    color: #6c757d !important;
+    padding: 12px 0 8px !important;
+    border: none !important;
+    border-top: 1px solid #f0f0f0 !important;
+    background: transparent !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.smit-billing-widget .ab-section .glyphicon,
+.billing-widget .ab-section .glyphicon {
+    color: #5BA89D;
+    font-size: 13px;
+    margin-right: 6px;
+}
+
+/* Финансовый grid 2x2 */
+.smit-billing-widget .ab-finance-grid,
+.billing-widget .ab-finance-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-top: 8px;
+}
+.smit-billing-widget .ab-finance-cell,
+.billing-widget .ab-finance-cell {
+    background-color: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 10px 12px;
+}
+.smit-billing-widget .ab-finance-cell .ab-label,
+.billing-widget .ab-finance-cell .ab-label {
+    font-size: 10.5px;
+    text-transform: uppercase;
+    color: #9ca3af;
+    letter-spacing: .4px;
+    margin-bottom: 3px;
+}
+.smit-billing-widget .ab-finance-cell .ab-value,
+.billing-widget .ab-finance-cell .ab-value {
+    font-size: 15px;
+    font-weight: 600;
+    color: #212529;
+}
+.smit-billing-widget .ab-finance-cell .ab-value.text-success { color: #2f8556 !important; }
+.smit-billing-widget .ab-finance-cell .ab-value.text-danger  { color: #c0392b !important; }
+
+/* Кнопка "Полная карточка" — brand-primary gradient */
+.smit-billing-widget .ab-fullcard-btn,
+.billing-widget .ab-fullcard-btn,
+.smit-billing-widget a.btn-primary,
+.billing-widget a.btn-primary {
+    background: linear-gradient(135deg, #5BA89D 0%, #4a8c82 100%) !important;
+    border: none !important;
+    color: #fff !important;
+    padding: 8px 16px !important;
+    border-radius: 8px !important;
+    font-size: 12.5px !important;
+    font-weight: 500 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    box-shadow: 0 2px 6px rgba(91,168,157,.25) !important;
+}
+.smit-billing-widget .ab-fullcard-btn:hover,
+.billing-widget .ab-fullcard-btn:hover {
+    background: linear-gradient(135deg, #4a8c82 0%, #3a7068 100%) !important;
+    box-shadow: 0 4px 12px rgba(91,168,157,.35) !important;
+}
+
+/* Таблица «АККАУНТЫ» внутри сайдбара */
+.smit-billing-widget table,
+.billing-widget table {
+    font-size: 12px !important;
+    margin-bottom: 0;
+}
+.smit-billing-widget table th,
+.billing-widget table th {
+    font-size: 10.5px !important;
+    text-transform: uppercase !important;
+    color: #9ca3af !important;
+    font-weight: 500 !important;
+    padding: 4px 8px !important;
+    border-bottom: 1px solid #f0f0f0 !important;
+}
+.smit-billing-widget table td,
+.billing-widget table td {
+    padding: 6px 8px !important;
+    border-top: 1px solid #f8f9f8 !important;
+}
+
+/* Сессия — список ключ:значение */
+.smit-billing-widget .ab-session-row,
+.billing-widget .ab-session-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 3px 0;
+    font-size: 12.5px;
+}
+.smit-billing-widget .ab-session-key,
+.billing-widget .ab-session-key {
+    color: #6c757d;
+}
+.smit-billing-widget .ab-session-val,
+.billing-widget .ab-session-val {
+    color: #212529;
+    font-weight: 500;
+}
+
+/* ============ TYPOGRAPHY NORMALIZE (billing-aligned font stack) ============ */
+/* Шрифты 1:1 с billing: --font-ui = system UI fonts */
+body,
+.btn,
+.form-control,
+input, select, textarea, button,
+.modal-content,
+.dropdown-menu,
+.navbar,
+.navbar-default,
+.panel, .panel-default,
+.well,
+h1, h2, h3, h4, h5, h6,
+.heading,
+.section-heading,
+.alert,
+.tooltip-inner,
+.popover {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+}
+
+/* Monospace для code/pre/IP-адресов */
+code, pre, kbd, samp, tt,
+.monospace, .ip, .conv-number {
+    font-family: ui-monospace, 'JetBrains Mono', Menlo, Consolas, monospace !important;
+}
+
+body {
+    font-size: 12px !important;
+    line-height: 1.45 !important;
+    font-weight: 400 !important;
+}
+
+/* Таблица тикетов / общие таблицы */
+.table-conversations,
+.table-conversations td,
+.table-conversations th,
+.table,
+.table > tbody > tr > td,
+.table > thead > tr > th {
+    font-size: 12px !important;
+    font-weight: 400 !important;
+    line-height: 1.35 !important;
+}
+.table-conversations > tbody > tr > td,
+.table > tbody > tr > td {
+    padding-top: 6px !important;
+    padding-bottom: 6px !important;
+    vertical-align: middle !important;
+    white-space: nowrap !important;
+}
+.table-conversations > thead > tr > th,
+.table > thead > tr > th {
+    padding-top: 8px !important;
+    padding-bottom: 8px !important;
+    font-weight: 600 !important;
+    font-size: 10.5px !important;
+    text-transform: uppercase !important;
+    letter-spacing: .3px !important;
+    white-space: nowrap !important;
+}
+
+/* Имя клиента / автора — одна строка, без переноса */
+.conv-customer,
+.conv-author,
+.table-conversations .conv-customer,
+.conv-customer-fullname,
+.conv-customer a {
+    font-weight: 500 !important;
+    font-size: 12px !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    max-width: 180px !important;
+    display: inline-block !important;
+    vertical-align: middle !important;
+}
+
+/* Колонка с клиентом — фикс. ширина чтобы не «дышала» */
+.table-conversations td.conv-customer-col,
+.table-conversations th.conv-customer-col {
+    width: 200px !important;
+    max-width: 200px !important;
+}
+
+/* Тема тикета — может переноситься, но компактнее */
+.conv-subject,
+.conv-attr {
+    font-size: 12px !important;
+    font-weight: 400 !important;
+}
+
+/* Превью текста */
+.conv-preview,
+.conv-text-preview {
+    font-size: 11.5px !important;
+    color: #6c757d !important;
+}
+
+/* Номер тикета */
+.conv-number {
+    font-size: 11.5px !important;
+    font-weight: 400 !important;
+    color: #6c757d !important;
+    white-space: nowrap !important;
+}
+
+/* Дата/время — компактная пилюля */
+.conv-thread-date,
+.conv-date,
+.table-conversations .conv-date {
+    font-size: 11px !important;
+    font-weight: 400 !important;
+    padding: 2px 7px !important;
+    border-radius: 10px !important;
+    background-color: #fff8e1 !important;
+    color: #5d4e1c !important;
+    white-space: nowrap !important;
+    display: inline-block !important;
+}
+
+/* Метки last-comment (lc-*) */
+.conv-last-comment-td,
+.conv-last-comment-td a {
+    font-size: 11px !important;
+    font-weight: 400 !important;
+    white-space: nowrap !important;
+}
+
+/* Кнопки — компактные */
+.btn { font-weight: 400 !important; font-size: 12px !important; padding: 5px 11px !important; }
+.btn-sm, .btn-xs { font-size: 11px !important; padding: 3px 8px !important; }
+
+/* Navbar — нормальный вес, компактный */
+.navbar-default .navbar-nav > li > a {
+    font-weight: 500 !important;
+    font-size: 12.5px !important;
+    padding: 15px 12px !important;
+}
+
+/* Headings — компактнее */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 500 !important;
+}
+h1 { font-size: 20px !important; }
+h2 { font-size: 17px !important; }
+h3 { font-size: 15px !important; }
+h4 { font-size: 13px !important; }
+.section-heading h1,
+.section-heading h2 {
+    font-size: 16px !important;
+    font-weight: 500 !important;
+}
+
+/* Star/checkbox колонки — узкие */
+.table-conversations .conv-star,
+.table-conversations .conv-checkbox {
+    padding-left: 6px !important;
+    padding-right: 2px !important;
+    width: 22px !important;
+}
+
+/* Avatars — компактнее */
+.person-photo {
+    width: 26px !important;
+    height: 26px !important;
+    font-size: 11px !important;
+}
+
+/* Sidebar links компактные */
+.sidebar-menu > li > a,
+.sidebar-2col li a {
+    font-size: 12.5px !important;
+    padding: 7px 12px !important;
+}
+
+/* Form labels & inputs */
+label, .control-label {
+    font-size: 12.5px !important;
+    font-weight: 500 !important;
+}
+.form-control,
+input, select, textarea {
+    font-size: 12.5px !important;
+}
+
+/* Tags / badges общие */
+.fs-tag-name,
+.fs-tag {
+    font-size: 10.5px !important;
+    padding: 2px 7px !important;
+}
+
+/* ============ DROPDOWN MENU (light + dark base) ============ */
+/* Базовые правила для обеих тем. Dark-overrides — в dark.css */
+.dropdown-menu {
+    background-color: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    box-shadow: 0 8px 32px rgba(0,0,0,.10), 0 0 0 1px rgba(0,0,0,.02);
+    padding: 4px;
+    margin-top: 4px;
+    min-width: 200px;
+}
+.dropdown-menu > li > a {
+    color: #212529;
+    padding: 8px 14px !important;
+    border-radius: 6px;
+    font-size: 13px;
+    line-height: 1.4;
+    background-color: transparent;
+    transition: background-color .12s ease;
+    text-align: left !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    white-space: nowrap !important;
+}
+
+/* ============ CUSTOM SCROLLBAR (light) ============ */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #5BA89D #f0f2f5;
+}
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #f0f2f5;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb {
+    background: #5BA89D;
+    border-radius: 4px;
+    border: 1px solid #f0f2f5;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #43b77a;
+}
+::-webkit-scrollbar-corner {
+    background: #f0f2f5;
+}
+
+/* Прокручиваемое dropdown — узкий scrollbar */
+.dropdown-menu {
+    max-height: 70vh !important;
+    overflow-y: auto !important;
+}
+.dropdown-menu::-webkit-scrollbar {
+    width: 6px;
+}
+.dropdown-menu::-webkit-scrollbar-thumb {
+    background: #5BA89D;
+    border-radius: 3px;
+    border: none;
+}
+.dropdown-menu > li > a .glyphicon,
+.dropdown-menu > li > a .fa,
+.dropdown-menu > li > a > i {
+    flex-shrink: 0;
+}
+.dropdown-menu > li > a .glyphicon,
+.dropdown-menu > li > a .fa,
+.dropdown-menu > li > a > i {
+    color: var(--brand-primary);
+    font-size: 14px;
+    width: 18px;
+    text-align: center;
+    flex-shrink: 0;
+}
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus {
+    background-color: var(--brand-primary-bg);
+    color: var(--brand-primary-darker);
+}
+.dropdown-menu > .active > a,
+.dropdown-menu > .active > a:hover,
+.dropdown-menu > .active > a:focus {
+    background-color: var(--brand-accent);
+    color: #fff;
+}
+.dropdown-menu > .active > a .glyphicon,
+.dropdown-menu > .active > a > i {
+    color: #fff;
+}
+.dropdown-menu > .divider {
+    background-color: #e5e7eb;
+    margin: 4px 0;
+    height: 1px;
+}
+.dropdown-header {
+    color: #6c757d;
+    padding: 6px 14px;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+}
+
+/* ============ MODALS (billing-style base) ============ */
+/* Применяется ВСЕГДА, базовая стилизация для обеих тем.
+   Глассморфизм-эффект — отдельно ниже (smit-glass-modals body class). */
+
+.modal-content {
+    border: 1px solid rgba(0,0,0,.08) !important;
+    border-radius: 12px !important;
+    box-shadow: 0 24px 64px rgba(0,0,0,.20), 0 8px 24px rgba(0,0,0,.10) !important;
+    overflow: hidden;
+}
+
+.modal-header {
+    padding: 18px 22px !important;
+    border-bottom: 1px solid rgba(0,0,0,.06) !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+}
+.modal-header .modal-title {
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    margin: 0 !important;
+    flex-grow: 1 !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+}
+.modal-header .modal-title .glyphicon,
+.modal-header .modal-title .fa,
+.modal-header .modal-title > i {
+    color: var(--brand-primary) !important;
+    font-size: 18px !important;
+}
+.modal-header .close {
+    margin: 0 !important;
+    padding: 4px 8px !important;
+    border-radius: 6px !important;
+    color: #9ca3af !important;
+    opacity: 1 !important;
+    font-size: 22px !important;
+    line-height: 1 !important;
+    background: transparent !important;
+    border: none !important;
+    transition: background .15s ease, color .15s ease;
+}
+.modal-header .close:hover {
+    background-color: rgba(0,0,0,.06) !important;
+    color: #495057 !important;
+}
+
+/* Sub-badge в шапке (типа "Все" или "RADIUS + ЛК") */
+.modal-header .modal-title-badge,
+.modal-header .badge,
+.modal-header .label {
+    background-color: rgba(91,168,157,.12) !important;
+    color: var(--brand-primary-dark) !important;
+    border: 1px solid rgba(91,168,157,.30) !important;
+    font-weight: 500 !important;
+    font-size: 12px !important;
+    padding: 3px 10px !important;
+    border-radius: 12px !important;
+}
+
+.modal-body {
+    padding: 22px !important;
+    font-size: 13px !important;
+}
+
+.modal-footer {
+    padding: 14px 22px !important;
+    border-top: 1px solid rgba(0,0,0,.06) !important;
+    background-color: rgba(248,249,248,.50) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    gap: 10px !important;
+}
+.modal-footer .btn { margin: 0 !important; }
+
+/* Form layout внутри модалки — 2 колонки на широких */
+.modal-body .form-group {
+    margin-bottom: 16px !important;
+}
+.modal-body label,
+.modal-body .control-label {
+    display: block !important;
+    font-size: 12.5px !important;
+    font-weight: 500 !important;
+    margin-bottom: 4px !important;
+    color: #374151 !important;
+    text-align: left !important;
+}
+.modal-body label .text-danger,
+.modal-body label .required {
+    color: #e05555 !important;
+    margin-left: 2px;
+}
+
+/* Help-блок под полем */
+.modal-body .help-block,
+.modal-body small.text-muted,
+.modal-body .text-help {
+    font-size: 11.5px !important;
+    color: #6c757d !important;
+    margin-top: 4px !important;
+    line-height: 1.4 !important;
+}
+
+/* Sub-card внутри модалки (как блок "Учётная запись RADIUS + ЛК") */
+.modal-body .sub-card,
+.modal-body .modal-sub-section {
+    background-color: rgba(91,168,157,.06) !important;
+    border: 1px solid rgba(91,168,157,.30) !important;
+    border-radius: 10px !important;
+    padding: 14px 16px !important;
+    margin: 12px 0 !important;
+}
+.modal-body .sub-card-title,
+.modal-body .modal-sub-section-title {
+    font-weight: 600 !important;
+    font-size: 13px !important;
+    margin-bottom: 12px !important;
+    color: var(--brand-primary-dark) !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+}
+
+/* Info-блок с иконкой */
+.modal-body .info-hint,
+.modal-body .alert-info {
+    background-color: rgba(91,168,157,.08) !important;
+    border-left: 3px solid var(--brand-primary) !important;
+    padding: 10px 14px !important;
+    border-radius: 6px !important;
+    font-size: 12.5px !important;
+    color: #374151 !important;
+    margin-top: 12px !important;
+}
+
+/* Чекбокс с пометкой ("Активен" / "Юр. лицо") */
+.modal-body label.checkbox.plain,
+.modal-body .checkbox-inline {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    cursor: pointer !important;
+    font-weight: 500 !important;
+    font-size: 13px !important;
+    color: #212529 !important;
+    padding: 6px 10px !important;
+    border-radius: 6px !important;
+    margin: 0 12px 0 0 !important;
+}
+.modal-body label.checkbox.plain input[type="checkbox"],
+.modal-body .checkbox-inline input[type="checkbox"] {
+    width: 16px !important;
+    height: 16px !important;
+    accent-color: var(--brand-primary) !important;
+    margin: 0 !important;
+}
+
+/* Buttons в модалке — больше padding для уверенности */
+.modal-footer .btn-primary,
+.modal-footer .btn-success {
+    padding: 8px 18px !important;
+    min-height: 36px !important;
+    font-weight: 500 !important;
+}
+.modal-footer .btn-default,
+.modal-footer .btn-bordered {
+    padding: 8px 18px !important;
+    min-height: 36px !important;
+}
+
+/* ============ MATTE GLASS MODALS (per-user opt-in, default ON) ============ */
+/* Активируется body-классом smit-glass-modals из ThemeServiceProvider.
+   Эффект frosted glass: blur+saturate фона + полупрозрачный modal-content. */
+
+body.smit-glass-modals .modal-backdrop,
+body.smit-glass-modals .modal-backdrop.in {
+    background: rgba(15, 23, 42, .35) !important;
+    opacity: 1 !important;
+    -webkit-backdrop-filter: blur(8px) saturate(1.4);
+    backdrop-filter: blur(8px) saturate(1.4);
+}
+
+body.smit-glass-modals .modal-content {
+    background-color: rgba(255, 255, 255, .80) !important;
+    -webkit-backdrop-filter: blur(28px) saturate(1.8);
+    backdrop-filter: blur(28px) saturate(1.8);
+    border: 1px solid rgba(255, 255, 255, .50) !important;
+    border-radius: 12px !important;
+    box-shadow:
+        0 24px 64px rgba(0, 0, 0, .25),
+        0 8px 24px rgba(0, 0, 0, .12),
+        inset 0 1px 0 rgba(255, 255, 255, .8) !important;
+}
+
+body.smit-glass-modals .modal-header,
+body.smit-glass-modals .modal-footer {
+    background-color: rgba(255, 255, 255, .35) !important;
+    border-color: rgba(0, 0, 0, .06) !important;
+}
+
+body.smit-glass-modals .modal-body {
+    background-color: transparent !important;
+}
+
+/* Поля внутри glass-модалки чуть прозрачные для эффекта стекла */
+body.smit-glass-modals .modal .form-control,
+body.smit-glass-modals .modal input[type="text"],
+body.smit-glass-modals .modal input[type="email"],
+body.smit-glass-modals .modal textarea,
+body.smit-glass-modals .modal select {
+    background-color: rgba(255, 255, 255, .65) !important;
+    border-color: rgba(0, 0, 0, .10) !important;
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+}
+body.smit-glass-modals .modal .form-control:focus {
+    background-color: rgba(255, 255, 255, .95) !important;
+    border-color: var(--brand-primary) !important;
+}
+
+/* Fallback для браузеров без backdrop-filter (Firefox <103) */
+@supports not (backdrop-filter: blur(1px)) {
+    body.smit-glass-modals .modal-content {
+        background-color: rgba(255, 255, 255, .98) !important;
+    }
+    body.smit-glass-modals .modal-backdrop {
+        background-color: rgba(0, 0, 0, .55) !important;
+    }
+}
+
+/* ============ CONTENT MAX-WIDTH (per-user opt-in, default ON) ============ */
+/* Активируется body-классом smit-constrain-content из ThemeServiceProvider.
+   Ограничивает .container/.container-fluid/.content-2col КРОМЕ navbar
+   (внутри .navbar контейнер должен быть полной ширины). */
+body.smit-constrain-content .container,
+body.smit-constrain-content .container-fluid,
+body.smit-constrain-content .content-2col,
+body.smit-constrain-content #conv-layout,
+body.smit-constrain-content .conv-main,
+body.smit-constrain-content .section,
+body.smit-constrain-content .block {
+    max-width: 1600px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+/* Navbar — всегда полная ширина */
+body.smit-constrain-content .navbar .container,
+body.smit-constrain-content .navbar .container-fluid,
+body.smit-constrain-content .navbar > .container,
+body.smit-constrain-content .navbar > .container-fluid {
+    max-width: none !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+/* Footer и body footer (если есть) тоже на всю ширину */
+body.smit-constrain-content .footer,
+body.smit-constrain-content .main-footer {
+    max-width: none !important;
+}
+
+/* На узких экранах ничего не ограничиваем */
+@media (max-width: 1700px) {
+    body.smit-constrain-content .container,
+    body.smit-constrain-content .container-fluid,
+    body.smit-constrain-content .content-2col {
+        max-width: 100% !important;
+    }
+}
+
+/* ============ NAVBAR (billing-style, 40px compact) ============ */
+.navbar-default,
+.navbar {
+    background-color: #ffffff !important;
+    border: none !important;
+    border-bottom: 1px solid #e5e7eb !important;
+    background-image: none !important;
+    box-shadow: 0 1px 2px rgba(0,0,0,.04);
+    min-height: 40px !important;
+    height: 40px !important;
+    margin-bottom: 0;
+}
+.navbar-default .navbar-header,
+.navbar .navbar-header {
+    min-height: 40px !important;
+    height: 40px !important;
+}
+.navbar-default .navbar-brand,
+.navbar .navbar-brand {
+    height: 40px !important;
+    padding: 6px 12px !important;
+    display: flex !important;
+    align-items: center !important;
+    line-height: 1 !important;
+}
+.navbar-default .navbar-brand img,
+.navbar .navbar-brand img {
+    height: 24px !important;
+    max-height: 24px !important;
+    margin: 0 !important;
+}
+.navbar-default .navbar-nav > li > a,
+.navbar .navbar-nav > li > a {
+    padding: 10px 12px !important;
+    line-height: 20px !important;
+    height: 40px !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+}
+.navbar-default .navbar-nav > li > a .glyphicon,
+.navbar-default .navbar-nav > li > a .fa,
+.navbar .navbar-nav > li > a .glyphicon {
+    font-size: 14px !important;
+    line-height: 1 !important;
+}
+.navbar-default .navbar-nav > li,
+.navbar .navbar-nav > li {
+    height: 40px !important;
+}
+.navbar-default .navbar-form,
+.navbar .navbar-form {
+    margin: 4px 8px !important;
+    padding: 0 !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+.navbar-default .navbar-form .form-control,
+.navbar .navbar-form .form-control {
+    height: 30px !important;
+    min-height: 30px !important;
+    padding: 4px 10px !important;
+    font-size: 12.5px !important;
+}
+.navbar-default .navbar-toggle,
+.navbar .navbar-toggle {
+    margin-top: 4px !important;
+    margin-bottom: 4px !important;
+    padding: 8px 10px !important;
+}
+/* Theme toggle, search-dt, web-notifications, profile-dropdown — все 40px */
+.navbar-default .navbar-nav .theme-toggle-btn,
+.navbar .theme-toggle-btn,
+.navbar-nav > li > a.theme-toggle-btn {
+    height: 40px !important;
+    padding: 10px 12px !important;
+}
+.navbar-default .navbar-nav .person-photo,
+.navbar .navbar-nav .person-photo {
+    width: 22px !important;
+    height: 22px !important;
+    font-size: 10px !important;
+}
+/* Уведомления-колокольчик / шестерёнка / поиск / лого вертикальное центрирование */
+.navbar-default .navbar-nav > li.dropdown > a,
+.navbar .navbar-nav > li.dropdown > a {
+    height: 40px !important;
+    line-height: 20px !important;
+}
+/* Адаптация под уменьшенный navbar — content начинается ниже на 40px (если есть fixed-top) */
+body.layout-navbar-fixed,
+body[class*="layout-navbar-fixed"] {
+    padding-top: 40px !important;
+}
+.navbar-fixed-top + * {
+    margin-top: 40px;
+}
+
+/* ============ КРИТИЧНЫЙ ФИКС: убрать pattern.jpg фон в светлой теме ============ */
+/* SmitUIServiceProvider добавляет body.smit-dashboard{background:url(pattern.jpg)} —
+   в светлой это серо-зелёный pattern. Убираем, ставим чистый surface-page. */
+body.smit-dashboard,
+body.smit-kanban,
+body.smit-ai-sessions,
+body.smit-kb,
+html:not([data-theme="dark"]) body.smit-dashboard,
+html:not([data-theme="dark"]) body.smit-kanban,
+html:not([data-theme="dark"]) body.smit-ai-sessions,
+html:not([data-theme="dark"]) body.smit-kb {
+    background: #f5f6f8 !important;
+    background-image: none !important;
+}
+/* Inline-стили SmitUI для kn-heading / section-heading с тёмным глассом — нейтрализуем в light */
+html:not([data-theme="dark"]) body.smit-kanban #kn-heading,
+html:not([data-theme="dark"]) body.smit-ai-sessions .section-heading,
+html:not([data-theme="dark"]) body.smit-kb .kb-header {
+    background: #ffffff !important;
+    background-image: none !important;
+    color: #212529 !important;
+    border: 1px solid #e5e7eb !important;
+    box-shadow: 0 1px 3px rgba(0,0,0,.06) !important;
+}
+html:not([data-theme="dark"]) body.smit-kanban #kn-heading h1,
+html:not([data-theme="dark"]) body.smit-ai-sessions .section-heading h1,
+html:not([data-theme="dark"]) body.smit-kb .kb-header h1 {
+    color: #212529 !important;
+    text-shadow: none !important;
+}
+
+/* ============ SECTION HEADING (".heading" внутри .section-heading) ============ */
+/* "SMIT34 Панель управления" → "Поддержка клиентов" — текст подменяет JS из provider'а.
+   Стилизация: Regular weight + margin-top 15px. */
+.section-heading {
+    margin-top: 15px !important;
+    padding-top: 0 !important;
+}
+.section-heading .heading,
+.section-heading h1.heading,
+.heading {
+    font-weight: 400 !important;
+    font-size: 18px !important;
+    margin-top: 0 !important;
+}
+
+/* ============ BALANCE MONITOR (приглушённый) ============ */
+li.balance-monitor.bm-desktop,
+li.balance-monitor,
+.bm-desktop {
+    opacity: 0.3 !important;
+    transition: opacity .2s ease;
+}
+li.balance-monitor.bm-desktop:hover,
+li.balance-monitor:hover,
+.bm-desktop:hover {
+    opacity: 1 !important;
+}
+
+/* ============ NAVBAR MENU ITEMS (billing-style) ============ */
+/* Основное меню navbar: горизонтальные текстовые пункты, brand-акцент активного */
+.navbar-default .navbar-nav,
+.navbar .navbar-nav {
+    margin: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+}
+.navbar-default .navbar-nav > li > a,
+.navbar .navbar-nav > li > a {
+    font-size: 13px !important;
+    font-weight: 500 !important;
+    color: #495057 !important;
+    text-decoration: none !important;
+    border-bottom: 2px solid transparent !important;
+    transition: color .15s ease, border-color .15s ease, background-color .15s ease !important;
+    padding: 9px 14px 9px 14px !important;
+}
+/* Иконка слева от текста пункта */
+.navbar-default .navbar-nav > li > a > .glyphicon,
+.navbar-default .navbar-nav > li > a > .fa,
+.navbar .navbar-nav > li > a > i {
+    color: var(--brand-primary) !important;
+    font-size: 13px !important;
+    margin-right: 4px !important;
+}
+/* Hover */
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus,
+.navbar .navbar-nav > li > a:hover,
+.navbar .navbar-nav > li > a:focus {
+    color: var(--brand-primary) !important;
+    background-color: rgba(91,168,157,.08) !important;
+    border-bottom-color: transparent !important;
+}
+/* Active item — зелёное подчёркивание + brand-color */
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus,
+.navbar .navbar-nav > .active > a {
+    color: var(--brand-primary) !important;
+    background-color: rgba(91,168,157,.10) !important;
+    border-bottom: 2px solid var(--brand-primary) !important;
+    font-weight: 600 !important;
+}
+/* Open dropdown — подсветка */
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus,
+.navbar .navbar-nav > .open > a {
+    color: var(--brand-primary) !important;
+    background-color: rgba(91,168,157,.10) !important;
+}
+
+/* Caret в dropdown-toggle — компактный */
+.navbar-default .navbar-nav > li > a .caret,
+.navbar .navbar-nav > li > a .caret {
+    margin-left: 6px !important;
+    border-top-color: currentColor !important;
+}
+
+/* Right-side navbar (поиск + уведомления + профиль + toggle) — выровнять справа */
+.navbar-default .navbar-right,
+.navbar .navbar-right {
+    margin-right: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    height: 40px !important;
+}
+
+/* Профильный dropdown справа — компактный с аватаром */
+.navbar-default .navbar-right > li > a.dropdown-toggle-account,
+.navbar .navbar-right > li > a.dropdown-toggle-account {
+    display: flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    padding: 8px 12px !important;
+    height: 40px !important;
+}
+.navbar-default .navbar-right .nav-user,
+.navbar .navbar-right .nav-user {
+    font-size: 12.5px !important;
+    line-height: 1 !important;
+    max-width: 140px !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+}
+
+/* Разделитель между группами иконок (если нужен) */
+.navbar-default .navbar-divider,
+.navbar .navbar-divider {
+    width: 1px !important;
+    height: 20px !important;
+    background-color: #e5e7eb !important;
+    margin: 10px 8px !important;
+}
+
+/* Dropdown menu из navbar — открывается прямо под пунктом, brand-граница сверху */
+.navbar-default .navbar-nav > li > .dropdown-menu,
+.navbar .navbar-nav > li > .dropdown-menu {
+    margin-top: 0 !important;
+    border-top: 2px solid var(--brand-primary) !important;
+    border-radius: 0 0 8px 8px !important;
+    box-shadow: 0 8px 24px rgba(0,0,0,.12) !important;
+    min-width: 180px !important;
+}
+
+/* Под navbar — фирменная градиентная полоса (как заголовок раздела на billing) */
+.smit-section-band {
+    background: linear-gradient(90deg, #43b77a 0%, #5BA89D 50%, #82cec3 100%);
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: .3px;
+    box-shadow: 0 2px 6px rgba(0,0,0,.10);
+}
+html[data-theme="dark"] .smit-section-band,
+body.dark-theme .smit-section-band {
+    background: linear-gradient(90deg, #2f8556 0%, #4a8c82 50%, #5BA89D 100%);
+    color: #fff;
+}
+/* === LIGHT navbar — тёмный текст на белом фоне (billing-style) === */
+.navbar-default .navbar-brand,
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+    color: #212529 !important;
+}
+/* navbar-nav > li > a — стилизация ПЕРЕНЕСЕНА выше в "NAVBAR MENU ITEMS"
+   (color #495057, hover brand, active brand-underline) */
+
+.navbar-default .navbar-toggle {
+    border-color: #d1d5db !important;
+}
+.navbar-default .navbar-toggle .icon-bar { background-color: #495057 !important; }
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+    background-color: #f3f4f6 !important;
+}
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+    border-color: transparent !important;
+}
+.navbar-default .navbar-text { color: #495057 !important; }
+
+/* Поиск в навбаре — компактный, не стеклянный, нормальный input */
+#search-dt input,
+.navbar-form .form-control {
+    background-color: #f8f9f8 !important;
+    border-color: #e5e7eb !important;
+    color: #212529 !important;
+}
+#search-dt input::placeholder,
+.navbar-form .form-control::placeholder {
+    color: #9ca3af !important;
+}
+
+/* Уведомления / профиль / шестерёнка — тёмные иконки в светлой теме */
+.navbar-default .glyphicon,
+.navbar-default .fa {
+    color: #495057;
+}
+/* === DROPDOWN "Учётная запись" — справа от навбара === */
+/* FreeScout default: .navbar-right.navbar-nav .dropdown-toggle-account — выровнять marg auto */
+.navbar-default .navbar-nav.navbar-right,
+.navbar .navbar-nav.navbar-right {
+    margin-left: auto !important;
+    float: right !important;
+}
+/* Если профильный dropdown вложен в первый navbar-nav — переносим его вправо через JS добавит класс */
+.navbar-default li.dropdown.account-pinned,
+.navbar li.dropdown.account-pinned {
+    margin-left: auto !important;
+}
+
+/* ============ UNIFIED BUTTONS (billing-style system) ============ */
+/* Базовый btn: 6px radius, 32px высота, gap для иконок, font-weight 500 */
+.btn {
+    border-radius: 6px !important;
+    padding: 6px 14px !important;
+    font-size: 12.5px !important;
+    font-weight: 500 !important;
+    line-height: 1.5 !important;
+    min-height: 32px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 6px !important;
+    transition: all .15s ease !important;
+    box-shadow: none !important;
+    border-width: 1px !important;
+    border-style: solid !important;
+}
+.btn:focus { outline: none !important; }
+.btn:focus-visible {
+    outline: 2px solid var(--brand-primary) !important;
+    outline-offset: 1px !important;
+}
+.btn .glyphicon,
+.btn .fa,
+.btn > i {
+    font-size: 12px;
+    line-height: 1;
+    margin: 0 !important;
+    top: 0 !important;
+    flex-shrink: 0;
+}
+.btn-sm, .btn-xs {
+    padding: 4px 10px !important;
+    min-height: 26px !important;
+    font-size: 11.5px !important;
+}
+.btn-lg {
+    padding: 9px 18px !important;
+    min-height: 40px !important;
+    font-size: 13.5px !important;
+}
+
+/* === FILLED PRIMARY (Применить / Рассылка / основное действие) === */
+.btn-primary,
+.btn-primary:focus {
+    background-color: var(--brand-accent) !important;
+    border-color: var(--brand-accent) !important;
+    color: #fff !important;
+}
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary.active,
+.open > .dropdown-toggle.btn-primary {
+    background-color: var(--brand-accent-dark) !important;
+    border-color: var(--brand-accent-dark) !important;
+    color: #fff !important;
+    box-shadow: 0 2px 6px rgba(67,183,122,.30) !important;
+}
+
+/* === FILLED SUCCESS (alias к primary) === */
+.btn-success,
+.btn-success:focus {
+    background-color: var(--brand-accent) !important;
+    border-color: var(--brand-accent) !important;
+    color: #fff !important;
+}
+.btn-success:hover,
+.btn-success:active {
+    background-color: var(--brand-accent-dark) !important;
+    border-color: var(--brand-accent-dark) !important;
+    color: #fff !important;
+    box-shadow: 0 2px 6px rgba(67,183,122,.30) !important;
+}
+
+/* === OUTLINE DEFAULT (Сохранить / CSV) === */
+.btn-default,
+.btn-default:focus,
+.btn-bordered,
+.btn-bordered:focus {
+    background-color: transparent !important;
+    border-color: #d1d5db !important;
+    color: #495057 !important;
+}
+.btn-default .glyphicon,
+.btn-default .fa,
+.btn-default > i,
+.btn-bordered .glyphicon,
+.btn-bordered > i {
+    color: var(--brand-primary) !important;
+}
+.btn-default:hover,
+.btn-default:active,
+.btn-bordered:hover {
+    background-color: var(--brand-primary-bg) !important;
+    border-color: var(--brand-primary) !important;
+    color: var(--brand-primary-dark) !important;
+}
+
+/* === OUTLINE DANGER (Удалить) === */
+.btn-danger,
+.btn-danger:focus,
+.btn-outline-danger {
+    background-color: transparent !important;
+    border-color: #f5b5b5 !important;
+    color: #c0392b !important;
+}
+.btn-danger .glyphicon,
+.btn-danger .fa,
+.btn-danger > i {
+    color: #e05555 !important;
+}
+.btn-danger:hover,
+.btn-danger:active {
+    background-color: rgba(224,85,85,.10) !important;
+    border-color: #e05555 !important;
+    color: #c0392b !important;
+}
+
+/* === OUTLINE WARNING === */
+.btn-warning,
+.btn-warning:focus {
+    background-color: transparent !important;
+    border-color: #f4c98a !important;
+    color: #b07820 !important;
+}
+.btn-warning .glyphicon,
+.btn-warning > i { color: #f0ad4e !important; }
+.btn-warning:hover {
+    background-color: rgba(240,173,78,.10) !important;
+    border-color: #f0ad4e !important;
+}
+
+/* === OUTLINE INFO === */
+.btn-info,
+.btn-info:focus {
+    background-color: transparent !important;
+    border-color: #b8dde7 !important;
+    color: #2980a0 !important;
+}
+.btn-info .glyphicon,
+.btn-info > i { color: #5bc0de !important; }
+.btn-info:hover {
+    background-color: rgba(91,192,222,.10) !important;
+    border-color: #5bc0de !important;
+}
+
+/* === LINK BUTTONS === */
+.btn-link {
+    background: transparent !important;
+    border: none !important;
+    color: var(--brand-primary) !important;
+    padding: 4px 8px !important;
+}
+.btn-link:hover {
+    color: var(--brand-primary-dark) !important;
+    text-decoration: none !important;
+    background-color: var(--brand-primary-bg) !important;
+}
+
+/* === CHIP TOGGLES (Все каналы / SMS / Email / TG / Push / VK / Сегодня / Неделя) === */
+/* Применяются автоматически к .btn-group > .btn (toggle group) и .nav-pills */
+.btn-group > .btn,
+.btn-group-toggle > .btn {
+    border-radius: 18px !important;
+    padding: 5px 12px !important;
+    margin-right: 4px !important;
+}
+.btn-group > .btn:not(.active):not(.btn-primary):not(.btn-success):not(.btn-danger) {
+    background-color: transparent !important;
+    border-color: var(--border-default) !important;
+    color: var(--text-secondary) !important;
+}
+.btn-group > .btn.active,
+.btn-group-toggle > .btn.active {
+    background-color: var(--brand-accent) !important;
+    border-color: var(--brand-accent) !important;
+    color: #fff !important;
+}
+
+/* Disabled state */
+.btn.disabled,
+.btn[disabled],
+fieldset[disabled] .btn {
+    opacity: 0.5 !important;
+    cursor: not-allowed !important;
+    box-shadow: none !important;
+}
+
+/* === INPUT-GROUP / FORM CONTROL ALIGNMENT === */
+/* Все формы — единый высокий 32px, скруг 6px */
+.form-control {
+    border-radius: 6px !important;
+    border: 1px solid #d1d5db !important;
+    padding: 6px 12px !important;
+    font-size: 12.5px !important;
+    min-height: 32px !important;
+    line-height: 1.5 !important;
+    box-shadow: none !important;
+    background-color: #fff !important;
+    color: #212529 !important;
+}
+.form-control:focus {
+    border-color: var(--brand-primary) !important;
+    box-shadow: 0 0 0 3px var(--brand-primary-25) !important;
+    outline: none !important;
+}
+.input-sm { min-height: 26px !important; padding: 4px 10px !important; font-size: 11.5px !important; }
+.input-lg { min-height: 40px !important; padding: 9px 14px !important; font-size: 13.5px !important; }
+
+/* Select / dropdowns тоже 32px */
+select.form-control,
+.select2-container .select2-selection--single {
+    height: 32px !important;
+    min-height: 32px !important;
+}
+.select2-container--default .select2-selection--single {
+    border-radius: 6px !important;
+    border: 1px solid #d1d5db !important;
+}
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    line-height: 30px !important;
+    padding-left: 12px !important;
+    color: #212529 !important;
+}
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+    height: 30px !important;
+}
+
+/* Badges — единый стиль pill (универсальный default) */
+.badge,
+.label {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 4px !important;
+    padding: 2px 8px !important;
+    border-radius: 10px !important;
+    font-size: 11px !important;
+    font-weight: 500 !important;
+    line-height: 1.5 !important;
+}
+
+/* ============ TAGS (billing-style summa/amount pills) ============ */
+/* Универсальные классы которые SmIT-модули могут использовать:
+   .tag, .smit-tag, .amount-tag, .fs-tag — выводятся как pill с цветовой семантикой */
+
+.tag,
+.smit-tag,
+.amount-tag,
+.fs-tag-name {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 5px !important;
+    padding: 4px 12px !important;
+    border-radius: 14px !important;
+    font-size: 12px !important;
+    font-weight: 500 !important;
+    line-height: 1.3 !important;
+    border: 1px solid transparent !important;
+    background-color: #f3f4f6 !important;
+    color: #4a5568 !important;
+    white-space: nowrap !important;
+}
+
+.tag .glyphicon,
+.tag .fa,
+.tag > i,
+.smit-tag .glyphicon,
+.amount-tag > i {
+    font-size: 11px !important;
+    line-height: 1 !important;
+}
+
+/* === SEMANTIC: success / income / positive === */
+.tag-success,
+.tag.success,
+.smit-tag-success,
+.amount-tag-positive,
+.amount-tag.positive,
+.label-success {
+    background-color: rgba(67,183,122,.10) !important;
+    color: #2f8556 !important;
+    border-color: rgba(67,183,122,.30) !important;
+}
+.tag-success > i,
+.smit-tag-success > i,
+.amount-tag-positive > i,
+.label-success > i {
+    color: #43b77a !important;
+}
+
+/* === SEMANTIC: danger / expense / negative === */
+.tag-danger,
+.tag.danger,
+.smit-tag-danger,
+.amount-tag-negative,
+.amount-tag.negative,
+.label-danger {
+    background-color: rgba(224,85,85,.10) !important;
+    color: #c0392b !important;
+    border-color: rgba(224,85,85,.30) !important;
+}
+.tag-danger > i,
+.smit-tag-danger > i,
+.amount-tag-negative > i,
+.label-danger > i {
+    color: #e05555 !important;
+}
+
+/* === SEMANTIC: warning === */
+.tag-warning,
+.smit-tag-warning,
+.label-warning {
+    background-color: rgba(240,173,78,.12) !important;
+    color: #b07820 !important;
+    border-color: rgba(240,173,78,.35) !important;
+}
+.tag-warning > i,
+.label-warning > i { color: #f0ad4e !important; }
+
+/* === SEMANTIC: info / neutral-brand === */
+.tag-info,
+.smit-tag-info,
+.label-info {
+    background-color: rgba(91,168,157,.12) !important;
+    color: #3a7068 !important;
+    border-color: rgba(91,168,157,.35) !important;
+}
+.tag-info > i,
+.label-info > i { color: #5BA89D !important; }
+
+/* === SEMANTIC: brand-primary === */
+.tag-primary,
+.smit-tag-primary,
+.label-primary {
+    background-color: rgba(91,168,157,.12) !important;
+    color: #3a7068 !important;
+    border-color: rgba(91,168,157,.35) !important;
+}
+
+/* === FreeScout fs-tag — может иметь data-color, не трогаем background если задан === */
+.fs-tag-name[style*="background"] {
+    background-color: revert !important;
+    color: #fff !important;
+    border: none !important;
+}
+
+/* Toolbar button row (flex-line кнопок над таблицей) */
+.btn-toolbar,
+.smit-toolbar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 12px;
+}
+
+a { color: var(--brand-primary); }
+a:hover, a:focus { color: var(--brand-primary-dark); }
+
+.label-primary,
+.badge-primary { background-color: var(--brand-primary); }
+
+.label-success,
+.badge-success,
+.label.label-success { background-color: var(--brand-accent); }
+
+/* ============ FORMS — focus ring ============ */
+.form-control:focus {
+    border-color: var(--brand-primary);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 6px var(--brand-primary-25);
+}
+input[type="checkbox"],
+input[type="radio"] { accent-color: var(--brand-primary); }
+
+/* ============ NAV TABS / PILLS ============ */
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+    border-top: 2px solid var(--brand-primary);
+}
+.nav-pills > li.active > a,
+.nav-pills > li.active > a:hover,
+.nav-pills > li.active > a:focus {
+    background-color: var(--brand-primary);
+}
+
+/* ============ PROGRESS / PAGINATION ============ */
+.progress-bar { background-color: var(--brand-primary); }
+.progress-bar-success { background-color: var(--brand-accent); }
+
+.pagination > .active > a,
+.pagination > .active > span,
+.pagination > .active > a:hover,
+.pagination > .active > span:hover {
+    background-color: var(--brand-primary);
+    border-color: var(--brand-primary);
+}
+.pagination > li > a,
+.pagination > li > span { color: var(--brand-primary); }
+
+/* ============ LIST GROUPS ============ */
+.list-group-item.active,
+.list-group-item.active:hover,
+.list-group-item.active:focus {
+    background-color: var(--brand-primary);
+    border-color: var(--brand-primary);
+}
+
+/* ============ SELECT2 BRAND ============ */
+.select2-container--default .select2-results__option--highlighted[aria-selected],
+.select2-container--default .select2-results__option--highlighted[data-selected] {
+    background-color: var(--brand-primary);
+    color: #fff;
+}
+.select2-container--default .select2-selection--multiple .select2-selection__choice {
+    background-color: var(--brand-primary-12);
+    border-color: var(--brand-primary-25);
+    color: var(--brand-primary-dark);
+}
+.select2-container--default.select2-container--focus .select2-selection--single,
+.select2-container--default.select2-container--focus .select2-selection--multiple {
+    border-color: var(--brand-primary);
+    box-shadow: 0 0 0 2px var(--brand-primary-25);
+}
+
+/* ============ STAR / UNREAD / NOTES ============ */
+.conv-star.active i,
+.conv-row.starred .conv-star i { color: var(--brand-primary) !important; }
+.conv-row.unread { border-left: 3px solid var(--brand-primary); }
+.conv-action-add-note { color: var(--brand-primary); }
+
+/* ============ "Active" mailbox links (теперь на тёмном navbar) ============ */
+.navbar-default .navbar-nav > .active > a {
+    color: #fff !important;
+    background-color: rgba(255,255,255,.18) !important;
+}
+
+/* ============ SmitUI-specific (dashboard hover etc, replace #4CAF50) ============ */
+body.smit-dashboard .dash-card:hover {
+    border-top-color: var(--brand-primary) !important;
+}
+body.smit-dashboard .dash-card-list-item strong.has-value {
+    color: var(--brand-primary-dark) !important;
+}
+@media (max-width: 767px) {
+    li.smit-profile-item { border-bottom-color: var(--brand-primary) !important; }
+    .smit-icon-row > li.smit-icon-item > a,
+    .smit-icon-row > li.smit-icon-item > a.dropdown-toggle {
+        color: var(--brand-primary) !important;
+    }
+    .smit-icon-row > li.smit-icon-item > a:hover {
+        color: var(--brand-primary-dark) !important;
+    }
+}
+
+/* ============ FOCUS A11Y ============ */
+.btn:focus-visible,
+a:focus-visible,
+[role="tab"]:focus-visible {
+    outline: 2px solid var(--brand-primary);
+    outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        transition: none !important;
+        animation: none !important;
+    }
+}
+
+/* ============ LOGO (вместо стандартного freescout/smit png) ============ */
+/* В обоих темах своя версия */
+.navbar-brand img {
+    height: 28px;
+    max-height: 28px;
+    margin-top: -3px;
+}
+.smit-logo-d,
+.smit-logo-w { display: none; }
+.smit-logo-w { display: inline-block; }
+html[data-theme="dark"] .smit-logo-w { display: none; }
+html[data-theme="dark"] .smit-logo-d { display: inline-block; }
+
+/* ============ THEME TOGGLE BUTTON ============ */
+.theme-toggle-btn {
+    cursor: pointer;
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255,255,255,.95) !important;
+    padding: 15px 12px !important;
+}
+.theme-toggle-btn:hover,
+.theme-toggle-btn:focus {
+    background-color: rgba(255,255,255,.15) !important;
+    color: #fff !important;
+}
+.theme-toggle-btn .theme-icon-sun,
+.theme-toggle-btn .theme-icon-moon {
+    font-size: 16px;
+    line-height: 1;
+}
+.theme-toggle-btn .theme-icon-sun { display: none; }
+.theme-toggle-btn .theme-icon-moon { display: inline-block; }
+html[data-theme="dark"] .theme-toggle-btn .theme-icon-moon { display: none; }
+html[data-theme="dark"] .theme-toggle-btn .theme-icon-sun { display: inline-block; }

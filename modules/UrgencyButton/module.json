@@ -1,0 +1,11 @@
+{
+    "name": "UrgencyButton",
+    "alias": "urgencybutton",
+    "description": "Bulk urgency button for tickets",
+    "version": "1.0.0",
+    "active": 1,
+    "order": 100,
+    "providers": [
+        "Modules\\UrgencyButton\\Providers\\UrgencyButtonServiceProvider"
+    ]
+}

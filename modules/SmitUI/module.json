@@ -1,0 +1,11 @@
+{
+    "name": "SmitUI",
+    "alias": "smitui",
+    "description": "SMIT UI customizations: navbar, mobile header, montazhnik mode, channel badges, hidden mailboxes + SmIT design system (tokens, brand colors, light/dark theme with toggle)",
+    "version": "2.0.0",
+    "providers": [
+        "Modules\\SmitUI\\Providers\\SmitUIServiceProvider",
+        "Modules\\SmitUI\\Providers\\ThemeServiceProvider"
+    ],
+    "active": 1
+}

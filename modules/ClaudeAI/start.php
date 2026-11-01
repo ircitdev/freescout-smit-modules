@@ -1,0 +1,2 @@
+<?php
+// ClaudeAI module bootstrap
